@@ -8,7 +8,7 @@ $dbname = getenv("MYSQL_DATABASE");
 $connection = mysql_connect($dbhost.":".$dbport, $dbuser, $dbpwd);
 
 if ($connection->connect_errno) {
-    echo "db connect korte error"
+    echo "db connect korte error";
     exit();
 }
 echo "<br><br><br><br>My awesome PHP test";
