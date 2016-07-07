@@ -5,17 +5,14 @@ $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
 $dbname = getenv("MYSQL_DATABASE");
 
-$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+$connection = mysql_connect($dbhost.":".$dbport, $dbuser, $dbpwd);
+
 if ($connection->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
+    echo "db connect korte error"
     exit();
 }
 echo "<br><br><br><br>My awesome PHP test";
-$query = "SELECT * from users";
-$rs = $connection->query($query);
-while ($row = $rs->fetch_array(MYSQLI_ASSOC)) {
-    echo $row['user_id'] . " " . $row['username'] . "\n";
-}
-$rs->close();
-$connection->close();
+
+$dbconnection = mysql_select_db($dbname);
+mysql_close();
 ?>
