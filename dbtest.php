@@ -39,7 +39,7 @@ if ($connection->query($sql) === TRUE) {
 
 // insert values
 $sql = "INSERT INTO users (username, password)
-VALUES ('mehamasum', 'secretpassword')";
+VALUES ('mehamasum', 'secretpassword');";
 $sql .= "INSERT INTO users (username, password)
 VALUES ('Mary', 'Moe');";
 $sql .= "INSERT INTO users (username, password)
