@@ -20,36 +20,7 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
-echo "<br><br><br><br><h1>My awesome DB test</h1>";
-
-
-// create table
-$sql = "CREATE TABLE users (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-username VARCHAR(30) NOT NULL,
-password VARCHAR(50) NOT NULL,
-reg_date TIMESTAMP
-)";
-
-if ($connection->query($sql) === TRUE) {
-    echo "Table \"users\" created successfully<br>";
-} else {
-    echo "Error creating table: " . $connection->error."<br>";
-}
-
-// insert values
-$sql = "INSERT INTO users (username, password)
-VALUES ('mehamasum', 'secretpassword');";
-$sql .= "INSERT INTO users (username, password)
-VALUES ('Mary', 'Moe');";
-$sql .= "INSERT INTO users (username, password)
-VALUES ('Julie', 'Dooley')";
-
-if ($connection->multi_query($sql) === TRUE) {
-    echo "New records created successfully<br>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error."<br>";
-}
+echo "<h1>My awesome DB test</h1>";
 
 // query
 $sql = "SELECT username, password FROM users";
@@ -63,7 +34,5 @@ if ($result->num_rows > 0) {
 	echo "0 results<br>";
 }
 
-
-$rs->close();
 $connection->close();
 ?>
