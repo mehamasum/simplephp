@@ -20,7 +20,7 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
-echo "<br><br><br><br><h1>My awesome PHP test</h1>";
+echo "<br><br><br><br><h1>My awesome DB test</h1>";
 
 
 // create table
@@ -32,9 +32,9 @@ reg_date TIMESTAMP
 )";
 
 if ($connection->query($sql) === TRUE) {
-    echo "Table MyGuests created successfully";
+    echo "Table \"users\" created successfully";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " . $connection->error;
 }
 
 // insert values
@@ -45,7 +45,7 @@ VALUES ('Mary', 'Moe');";
 $sql .= "INSERT INTO users (username, password)
 VALUES ('Julie', 'Dooley')";
 
-if ($conn->multi_query($sql) === TRUE) {
+if ($connection->multi_query($sql) === TRUE) {
     echo "New records created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
