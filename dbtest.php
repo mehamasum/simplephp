@@ -32,9 +32,9 @@ reg_date TIMESTAMP
 )";
 
 if ($connection->query($sql) === TRUE) {
-    echo "Table \"users\" created successfully";
+    echo "Table \"users\" created successfully<br>";
 } else {
-    echo "Error creating table: " . $connection->error;
+    echo "Error creating table: " . $connection->error."<br>";
 }
 
 // insert values
@@ -46,21 +46,21 @@ $sql .= "INSERT INTO users (username, password)
 VALUES ('Julie', 'Dooley')";
 
 if ($connection->multi_query($sql) === TRUE) {
-    echo "New records created successfully";
+    echo "New records created successfully<br>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error."<br>";
 }
 
 // query
 $sql = "SELECT username, password FROM users";
-$result = $conn->query($sql);
+$result = $connection->query($sql);
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		echo "id: " . $row["id"]. " - User: " . $row["username"]. " Password: " . $row["password"]. "<br>";
 	}
 } else {
-	echo "0 results";
+	echo "0 results<br>";
 }
 
 
