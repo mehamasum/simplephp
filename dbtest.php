@@ -15,7 +15,7 @@ $dbname = getenv("MYSQL_DATABASE");
 echo $dbname;
 echo "<br>";
 
-$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+$connection = new mysqli($dbhost, "system", "system", "sampledb");
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
