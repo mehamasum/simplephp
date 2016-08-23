@@ -30,28 +30,9 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="index.php">Home</a></li>
-								<li>
-									<a href="">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="">Phasellus consequat</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="left-sidebar.html">Paients</a></li>
+								<li><a href="right-sidebar.html">Account</a></li>
+								<li><a href="no-sidebar.html">About</a></li>
 							</ul>
 						</nav>
 
@@ -76,21 +57,21 @@
 			<div class="wrapper style2">
 				<section class="container">
 					<header class="major">
-						<h2>Nulla luctus eleifend</h2>
-						<span class="byline">Mauris vulputate dolor sit amet nibh</span>
+						<h2>New set of features</h2>
+						<span class="byline">For your ease!</span>
 					</header>
 					<div class="row no-collapse-1">
 						<section class="4u">
 							<a href="#" class="image feature"><img src="images/pic02.jpg" alt=""></a>
-							<p>Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat.</p>
+							<p>Patient vitals at your hand</p>
 						</section>
 						<section class="4u">
 							<a href="#" class="image feature"><img src="images/pic03.jpg" alt=""></a>
-							<p>Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis. Donec magna.</p>
+							<p>Sync with cloud</p>
 						</section>
 						<section class="4u">
 							<a href="#" class="image feature"><img src="images/pic04.jpg" alt=""></a>
-							<p>Curabitur sem urna, consequat vel, suscipit convallis sem leo, mattis placerat, nulla. Sed ac leo.</p>
+							<p>Online appointments</p>
 						</section>
 	
 					</div>
@@ -202,7 +183,7 @@
 
 					<!-- Copyright -->
 						<div class="copyright">
-							Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+							Copyright 2016, BATFIA
 						</div>
 
 				</div>
