@@ -1,5 +1,5 @@
 # simplephp
 
-form test :
-submission from : login.php
-result : welcome.php
+form test :<br>
+submission from : login.php<br>
+result : welcome.php<br>
