@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Horizons by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
-		<title>Horizons by TEMPLATED</title>
+		<title>HealthPal Web</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -29,12 +24,12 @@
 				<div class="container">
 						
 					<!-- Logo -->
-						<h1><a href="#" id="logo">Horizons</a></h1>
+						<h1><a href="#" id="logo">HealthPal Web</a></h1>
 					
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="index.php">Home</a></li>
 								<li>
 									<a href="">Dropdown</a>
 									<ul>
@@ -66,10 +61,10 @@
 							<div class="container">
 								<section>
 									<header class="major">
-										<h2>Welcome to Horizons!</h2>
-										<span class="byline">&hellip; a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit!</span>
+										<h2>Welcome to HealthPal Web 2.1!</h2>
+										<span>A great way for physicans to keep in touch with patients.</span>
 									</header>
-									<a href="#" class="button alt">Sign Up</a>
+									<a href="#" class="button alt">Log In</a>
 								</section>			
 							</div>
 						</div>
