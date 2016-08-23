@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Zerotype Website Template</title>
+	<title>HealthPal Physician</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
@@ -45,38 +45,25 @@
 	</div>
 	<div id="contents">
 		<div id="tagline" class="clearfix">
-			<h1>Design With Simplicity.</h1>
+			<h1>HealthPal Web for Physicians</h1>
 			<div>
 				<p>
-					You can replace all this text with your own text. Want an easier solution for a Free Website?
-				</p>
-				<p>
-					Head straight to Wix and immediately start customizing your website!
-				</p>
-				<p>
-					Wix is an online website builder with a simple drag & drop interface, meaning you do the work online and instantly publish to the web.
+					Stay connected to your pateints
 				</p>
 			</div>
-			<div>
-				<p>
-					You can replace all this text with your own text. Want an easier solution for a Free Website?
-				</p>
-				<p>
-					Head straight to Wix and immediately start customizing your website!
-				</p>
-				<p>
-					Wix is an online website builder with a simple drag & drop interface, meaning you do the work online and instantly publish to the web.
-				</p>
-			</div>
+		
 		</div>
 	</div>
 	<div id="footer">
 		<div class="clearfix">
 			<div id="connect">
-				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a><a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a><a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a><a href="http://www.freewebsitetemplates.com/misc/contact/" target="_blank" class="tumbler"></a>
+				<a href="http://facebook.com/" target="_blank" class="facebook"></a>
+				<a href="http://google.com/" target="_blank" class="googleplus"></a>
+				<a href="http://twitter.com/" target="_blank" class="twitter"></a>
+				<a href="http://tumblr.com/" target="_blank" class="tumbler"></a>
 			</div>
 			<p>
-				© 2023 Zerotype. All Rights Reserved.
+				© 2016 BATFIA. All Rights Reserved.
 			</p>
 		</div>
 	</div>
