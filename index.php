@@ -33,7 +33,6 @@
 	</div>
 	<div id="adbox">
 		<div class="clearfix">
-			<img src="images/box.png" alt="Img" height="342" width="368">
 			<div>
 				<h1>Ideas?</h1>
 				<h2>That's what we live for.</h2>
