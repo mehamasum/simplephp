@@ -6,7 +6,7 @@ include("../class/pImage.class.php");
 
 
 // mysql -u system -p system -h 172.30.137.179 sampledb
-/*$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbhost = getenv("MYSQL_SERVICE_HOST");
 echo $dbhost;
 echo "<br>";
 $dbport = getenv("MYSQL_SERVICE_PORT");
@@ -26,7 +26,7 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
-echo "<h1>My awesome DB test</h1>";
+//echo "<h1>My awesome DB test</h1>";
 
 
 // query
@@ -37,15 +37,15 @@ $temperature="";
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		echo "Temperature: " . $row["temperature"]. "<br>";
+		//echo "Temperature: " . $row["temperature"]. "<br>";
 		$temperature[] = $row["temperature"];
 	}
 } else {
-	echo "0 results<br>";
+	//echo "0 results<br>";
 }
 
 
-$connection->close(); */
+$connection->close(); 
 
 
 /* Save the data in the pData array */
