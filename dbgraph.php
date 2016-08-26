@@ -31,13 +31,17 @@ echo "<h1>My awesome DB test</h1>";
 $sql = "SELECT * FROM measures";
 $result = $connection->query($sql);
 
-$timestamp=""; $temperature=""; $humidity="";
-while($row = mysql_fetch_array($result))
- {
-  /* Push the results of the query in an array */
-  $temperature[] = $row["temperature"];
-  $humidity[]    = $row["humidity"];
- }
+$temperature="";
+
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo "Temperature: " . $row["temperature"]. "<br>";
+		$temperature[] = $row["temperature"];
+	}
+} else {
+	echo "0 results<br>";
+}
+
 
 /* Save the data in the pData array */
 $myData->addPoints($temperature,"Temperature");
