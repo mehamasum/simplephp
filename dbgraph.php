@@ -45,6 +45,9 @@ if ($result->num_rows > 0) {
 }
 
 
+$connection->close();
+
+
 /* Save the data in the pData array */
 $myData = new pData(); 
 //$myData->addPoints($temperature,"Temperature");
