@@ -2,9 +2,9 @@
  /* CAT:Misc */
 
  /* Include all the classes */ 
- include("class/pDraw.class.php"); 
- include("class/pImage.class.php"); 
- include("class/pData.class.php");
+ include("../class/pDraw.class.php"); 
+ include("../class/pImage.class.php"); 
+ include("../class/pData.class.php");
 
  /* Create your dataset object */ 
  $myData = new pData(); 
@@ -13,7 +13,7 @@
  $myData->addPoints(array(1,3,4,3,5));
 
  /* Create a pChart object and associate your dataset */ 
- $myPicture = new pImage(700,230,$myData);
+ $myPicture = new pImage(500,500,$myData);
 
  /* Choose a nice font */
  $myPicture->setFontProperties(array("FontName"=>"../fonts/Forgotte.ttf","FontSize"=>11));
