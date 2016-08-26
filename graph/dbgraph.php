@@ -58,7 +58,7 @@ $myData = new pData();
  $myPicture = new pImage(500,500,$myData);
 
  /* Choose a nice font */
- //$myPicture->setFontProperties(array("FontName"=>"../fonts/Forgotte.ttf","FontSize"=>11));
+ $myPicture->setFontProperties(array("FontName"=>"../fonts/Forgotte.ttf","FontSize"=>11));
 
  /* Define the boundaries of the graph area */
  $myPicture->setGraphArea(60,40,670,190);
