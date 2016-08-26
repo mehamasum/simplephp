@@ -1,53 +1,32 @@
 <?php
- require("class/pData.class.php");
-require("class/pDraw.class.php");
-require("class/pImage.class.php");
-require("class/pPie.class.php");
+ /* CAT:Misc */
 
+ /* Include all the classes */ 
+ include("../class/pDraw.class.php"); 
+ include("../class/pImage.class.php"); 
+ include("../class/pData.class.php");
 
-$font1 = "fonts/pf_arma_five.ttf" ;
-$font2 = "fonts/pf_arma_five.ttf" ;
+ /* Create your dataset object */ 
+ $myData = new pData(); 
+ 
+ /* Add data in your dataset */ 
+ $myData->addPoints(array(1,3,4,3,5));
 
- $MyData = new pData();   
- $MyData->addPoints(array(50,2,3,4,7,10,25,48,41,10),"ScoreA");  
- $MyData->setSerieDescription("ScoreA","Application A");
+ /* Create a pChart object and associate your dataset */ 
+ $myPicture = new pImage(500,500,$myData);
 
- /* Define the absissa serie */
- $MyData->addPoints(array("A0","B1","C2","D3","E4","F5","G6","H7","I8","J9"),"Labels");
- $MyData->setAbscissa("Labels");
+ /* Choose a nice font */
+ $myPicture->setFontProperties(array("FontName"=>"../fonts/Forgotte.ttf","FontSize"=>11));
 
- /* Create the pChart object */
- $myPicture = new pImage(300,260,$MyData);
+ /* Define the boundaries of the graph area */
+ $myPicture->setGraphArea(60,40,670,190);
 
- /* Draw a solid background */
- $Settings = array("R"=>170, "G"=>183, "B"=>87, "Dash"=>1, "DashR"=>190, "DashG"=>203, "DashB"=>107);
- $myPicture->drawFilledRectangle(0,0,300,300,$Settings);
+ /* Draw the scale, keep everything automatic */ 
+ $myPicture->drawScale();
 
- /* Overlay with a gradient */
- $Settings = array("StartR"=>219, "StartG"=>231, "StartB"=>139, "EndR"=>1, "EndG"=>138, "EndB"=>68, "Alpha"=>50);
- $myPicture->drawGradientArea(0,0,300,260,DIRECTION_VERTICAL,$Settings);
- $myPicture->drawGradientArea(0,0,300,20,DIRECTION_VERTICAL,array("StartR"=>0,"StartG"=>0,"StartB"=>0,"EndR"=>50,"EndG"=>50,"EndB"=>50,"Alpha"=>100));
-
- /* Add a border to the picture */
- $myPicture->drawRectangle(0,0,299,259,array("R"=>0,"G"=>0,"B"=>0));
-
- /* Write the picture title */ 
- $myPicture->setFontProperties(array("FontName"=>$font1,"FontSize"=>6));
- $myPicture->drawText(10,13,"pPie - Draw 2D pie charts",array("R"=>255,"G"=>255,"B"=>255));
-
- /* Set the default font properties */ 
- $myPicture->setFontProperties(array("FontName"=>$font2,"FontSize"=>10,"R"=>80,"G"=>80,"B"=>80));
-
- /* Create the pPie object */ 
- $PieChart = new pPie($myPicture,$MyData);
-
- /* Draw an AA pie chart */ 
- $PieChart->draw3DPie(160,140,array("Radius"=>70,"DrawLabels"=>TRUE,"LabelStacked"=>TRUE,"Border"=>TRUE));
-
- /* Write the legend box */ 
- $myPicture->setShadow(FALSE);
- $PieChart->drawPieLegend(15,40,array("Alpha"=>20));
+ /* Draw the scale, keep everything automatic */ 
+ $myPicture->drawSplineChart();
 
  /* Render the picture (choose the best way) */
- $myPicture->autoOutput("vgraph.png");
+ $myPicture->autoOutput("pictures/example.basic.png");
 ?>

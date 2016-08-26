@@ -6,7 +6,7 @@ include("../class/pImage.class.php");
 
 
 // mysql -u system -p system -h 172.30.137.179 sampledb
-$dbhost = getenv("MYSQL_SERVICE_HOST");
+/*$dbhost = getenv("MYSQL_SERVICE_HOST");
 echo $dbhost;
 echo "<br>";
 $dbport = getenv("MYSQL_SERVICE_PORT");
@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
 }
 
 
-$connection->close();
+$connection->close(); */
 
 
 /* Save the data in the pData array */
