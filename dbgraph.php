@@ -47,7 +47,8 @@ if ($result->num_rows > 0) {
 
 /* Save the data in the pData array */
 $myData = new pData(); 
-$myData->addPoints($temperature,"Temperature");
+//$myData->addPoints($temperature,"Temperature");
+ $myData->addPoints(array(1,3,4,3,5));
 //$myData->addPoints($humidity,"Humidity");
 
 /* Create a pChart object and associate your dataset */ 
