@@ -1,8 +1,8 @@
 <?php
 
-include("class/pData.class.php");
-include("class/pDraw.class.php"); 
-include("class/pImage.class.php"); 
+include("../class/pData.class.php");
+include("../class/pDraw.class.php"); 
+include("../class/pImage.class.php"); 
 
 
 // mysql -u system -p system -h 172.30.137.179 sampledb
