@@ -33,6 +33,7 @@ $emparray = array();
 while($row =mysqli_fetch_assoc($result))
 {
 	$emparray[] = $row;
+	echo $row.<br>;
 }
 
 echo json_encode($emparray);
