@@ -1,7 +1,7 @@
 <?php
 
 include("class/pData.class.php");
-$MyData = new pData(); 
+
 
 // mysql -u system -p system -h 172.30.137.179 sampledb
 $dbhost = getenv("MYSQL_SERVICE_HOST");
@@ -44,6 +44,7 @@ if ($result->num_rows > 0) {
 
 
 /* Save the data in the pData array */
+$myData = new pData(); 
 $myData->addPoints($temperature,"Temperature");
 //$myData->addPoints($humidity,"Humidity");
 
