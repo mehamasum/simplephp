@@ -1,4 +1,7 @@
 <?php
+
+// mysql -u system -p system -h 172.30.137.179 sampledb
+
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 echo $dbhost;
 echo "<br>";
