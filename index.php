@@ -1,36 +1,31 @@
 <html>
   <head>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-    
-    // Load the Visualization API and the piechart package.
-    google.load('visualization', '1', {'packages':['corechart']});
-      
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.setOnLoadCallback(drawChart);
-      
-    function drawChart() {
-      var jsonData = $.ajax({
-          url: "getData.php",
-          dataType:"json",
-          async: false
-          }).responseText;
-          
-      // Create our data table out of JSON data loaded from server.
-      var data = new google.visualization.DataTable(jsonData);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, {width: 800, height: 400});
-    }
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
     </script>
   </head>
-
   <body>
-    <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
-</html> 
+</html>
