@@ -1,52 +1,47 @@
 <html>
   <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {packages: ['corechart', 'bar']});
-      google.charts.setOnLoadCallback(drawBasic);
+    
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1', {'packages':['corechart']});
       
-      function drawBasic() {
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
       
-            var data = new google.visualization.DataTable();
-            data.addColumn('timeofday', 'Time of Day');
-            data.addColumn('number', 'Motivation Level');
-      
-            data.addRows([
-              [{v: [8, 0, 0], f: '8 am'}, 1],
-              [{v: [9, 0, 0], f: '9 am'}, 2],
-              [{v: [10, 0, 0], f:'10 am'}, 3],
-              [{v: [11, 0, 0], f: '11 am'}, 4],
-              [{v: [12, 0, 0], f: '12 pm'}, 5],
-              [{v: [13, 0, 0], f: '1 pm'}, 6],
-              [{v: [14, 0, 0], f: '2 pm'}, 7],
-              [{v: [15, 0, 0], f: '3 pm'}, 8],
-              [{v: [16, 0, 0], f: '4 pm'}, 9],
-              [{v: [17, 0, 0], f: '5 pm'}, 10],
-            ]);
-      
-            var options = {
-              title: 'Motivation Level Throughout the Day',
-              hAxis: {
-                title: 'Time of Day',
-                format: 'h:mm a',
-                viewWindow: {
-                  min: [7, 30, 0],
-                  max: [17, 30, 0]
-                }
-              },
-              vAxis: {
-                title: 'Rating (scale of 1-10)'
-              }
-            };
-      
-            var chart = new google.visualization.ColumnChart(
-              document.getElementById('chart_div'));
-      
-            chart.draw(data, options);
-          }
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "getData.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+      // Create our data table out of JSON data loaded from server.
+      var data = new google.visualization.DataTable(jsonData);
+	  
+	  var options = {
+                  title: 'Motivation Level Throughout the Day',
+                  hAxis: {
+                    title: 'Time of Day',
+                  },
+                  vAxis: {
+                    title: 'Rating (scale of 1-10)'
+                  }
+                };
+	  
+	  
+	  
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
     </script>
   </head>
+
   <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div" style="width: auto; height: 600px;"></div>
   </body>
-</html>
+</html> 
