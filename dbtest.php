@@ -28,12 +28,12 @@ echo "<h1>My awesome DB test</h1>";
 
 
 // create table
-$sql = "CREATE TABLE web_user_info(
+$sql = CREATE TABLE web_user_info(
 email VARCHAR(30) PRIMARY KEY,
 first_name VARCHAR(50),
 last_name VARCHAR(50),
 sex VARCHAR(8),
-dobirth SIGNED BIGINT(20),
+dobirth BIGINT(20),
 weight DOUBLE(10,2),
 height DOUBLE(10,2),
 weight_unit VARCHAR(10),
