@@ -1,0 +1,14 @@
+CREATE TABLE web_user_info(
+email VARCHAR(30) PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+sex VARCHAR(10) NOT NULL,
+dob DOUBLE(10) NOT NULL,
+weight DOUBLE(10,2) NOT NULL,
+height DOUBLE(10,2) NOT NULL,
+weight_unit VARCHAR(10) NOT NULL,
+height_unit VARCHAR(10) NOT NULL,
+hardwork INT(2) NOT NULL,
+password VARCHAR(40) NOT NULL,
+blood VARCHAR(20) NOT NULL);
+

@@ -25,22 +25,30 @@ if ($connection->connect_errno) {
 }
 echo "<h1>My awesome DB test</h1>";
 
-/* 
+
 
 // create table
-$sql = "CREATE TABLE users (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(30) NOT NULL,
-password VARCHAR(50) NOT NULL,
-reg_date TIMESTAMP
-)";
+$sql = "CREATE TABLE web_user_info(
+email VARCHAR(30) PRIMARY KEY,
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+sex VARCHAR(8),
+dobirth SIGNED BIGINT(20),
+weight DOUBLE(10,2),
+height DOUBLE(10,2),
+weight_unit VARCHAR(10),
+height_unit VARCHAR(10),
+hardwork INT(2),
+password VARCHAR(40),
+blood VARCHAR(5))";
 
 if ($connection->query($sql) === TRUE) {
-	echo "Table \"users\" created successfully<br>";
+	echo "Table created successfully<br>";
 } else {
 	echo "Error creating table: " . $connection->error."<br>";
 }
 
+/*
 // insert values
 $sql = "INSERT INTO users (username, password)
 VALUES ('mehamasum', 'secretpassword');";
@@ -57,6 +65,7 @@ if ($connection->multi_query($sql) === TRUE) {
 
 */
 
+/*
 // query
 $sql = "SELECT username, password FROM users";
 $result = $connection->query($sql);
@@ -68,6 +77,9 @@ if ($result->num_rows > 0) {
 } else {
 	echo "0 results<br>";
 }
+*/
+
+
 
 
 $connection->close();
