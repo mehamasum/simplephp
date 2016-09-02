@@ -7,9 +7,12 @@
  if($auth == '01521112085') {
 	 require_once('db-connect.php');
 	 
+	foreach ($_POST as $param_name => $param_val) {
+		echo "Param: $param_name, Value: $param_val<br>";
+	}
 	 
 	 // insert values
-	$sql = "INSERT INTO web_user_info (email, first_name, last_name, sex, dob, weight, height, weight_unit, height_unit, hardwork, password, blood) VALUES ('".$_POST['email']."','".$_POST['first_name']."','".$_POST['last_name']."','".$_POST['sex']."',".$_POST['dob'].", ".$_POST['weight']." , ".$_POST['height']." ,'".$_POST['weight_unit']."','".$_POST['height_unit']."', ".$_POST['hardwork'].", '".$_POST['password']."','".$_POST['blood']."');";
+	$sql = "INSERT INTO web_user_info (email, first_name, last_name, sex, dob, weight, height, weight_unit, height_unit, hardwork, password, blood) VALUES ('" . $_POST['email'] . "','" . $_POST['first_name'] . "','" . $_POST['last_name'] . "','" . $_POST['sex'] . "',". $_POST['dob'] . ", ".$_POST['weight'] . " , " . $_POST['height'] . " ,'" . $_POST['weight_unit'] . "','" . $_POST['height_unit'] . "', " .$_POST['hardwork'] . ", '" . $_POST['password'] . "','" . $_POST['blood'] . "');";
 	
 	if ($connection->query($sql) === TRUE) {
 		echo "New records created successfully<br>";
