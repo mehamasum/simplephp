@@ -3,12 +3,12 @@ email VARCHAR(30) PRIMARY KEY,
 first_name VARCHAR(50),
 last_name VARCHAR(50),
 sex VARCHAR(8),
-dob BIGINT(20),
-weight DOUBLE(10,2),
-height DOUBLE(10,2),
+dob BIGINT(20), //
+weight DOUBLE(10,2), //
+height DOUBLE(10,2), //
 weight_unit VARCHAR(10),
 height_unit VARCHAR(10),
-hardwork INT(2),
+hardwork INT(2), //
 password VARCHAR(40),
 blood VARCHAR(5));
 
