@@ -12,10 +12,10 @@
 	$result = $connection->query($sql);
 
 	if ($result->num_rows > 0) {
-		echo "0" . "<br>";
+		echo "0";
 	}
 	else {
-		echo "1". "<br>";
+		echo "1";
 	}
 	mysqli_close($connection);
  }
