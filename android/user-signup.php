@@ -17,7 +17,7 @@
 	if ($connection->query($sql) === TRUE) {
 		echo "New records created successfully<br>";
 	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error."<br>";
+		echo "Error: " . $sql . "<br>" . $connection->error."<br>";
 	}
 	
 	// query
