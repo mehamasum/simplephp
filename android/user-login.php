@@ -26,9 +26,9 @@
 	
 	if ($result->num_rows > 0) {
 		
-		while($row = $result->fetch_assoc()) {
-			array_push( $reply, 
-			array('first_name'=>$row['first_name'],
+		$row = $result->fetch_assoc();
+		
+		$reply = array('first_name'=>$row['first_name'],
 			'last_name'=>$row['last_name'],
 			'sex'=>$row['sex'],
 			'dob'=>$row['dob'],
@@ -37,10 +37,9 @@
 			'weight_unit'=>$row['weight_unit'],
 			'height_unit'=>$row['height_unit'],
 			'hardwork'=>$row['hardwork'],
-			'blood'=>$row['blood']) );
-		}
+			'blood'=>$row['blood']);
 
-		echo json_encode(array("reply"=>$reply)); 
+		echo json_encode($reply); 
 	}
 	else {
 		echo "0";
