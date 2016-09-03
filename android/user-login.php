@@ -7,8 +7,8 @@
  
  if($auth == '01521112085') {
 	
-	$email = $_POST['email'];
-	$pass = $_POST['pass'];	
+	$email = $_GET['email'];
+	$pass = $_GET['pass'];	
 	 
 	require_once('db-connect.php');
 	
