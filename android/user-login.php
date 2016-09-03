@@ -38,6 +38,8 @@
 		echo "0";
 	}
 	
-	mysqli_close($connection);
+ }
+	
+mysqli_close($connection);
  
 ?>
