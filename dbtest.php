@@ -58,7 +58,7 @@ if ($connection->multi_query($sql) === TRUE) {
 */
 
 // query
-$sql = "SELECT username, password FROM users";
+/*$sql = "SELECT username, password FROM users";
 $result = $connection->query($sql);
 
 if ($result->num_rows > 0) {
@@ -67,7 +67,7 @@ if ($result->num_rows > 0) {
 	}
 } else {
 	echo "0 results<br>";
-}
+}*/
 
 
 $connection->close();
