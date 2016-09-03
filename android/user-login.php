@@ -8,12 +8,12 @@
  if($auth == '01521112085') {
 	
 	$email = $_POST['email'];
-	$pass = $_POST['pass'];	
+	$password = $_POST['password'];	
 	 
 	require_once('db-connect.php');
 	
 	// query
-	$sql = "SELECT * FROM web_user_info WHERE email='$email' AND password='$pass'";
+	$sql = "SELECT * FROM web_user_info WHERE email='". $email . "' AND password='". $password. "'";
 	$result = $connection->query($sql);
 	
 	if ($result->num_rows > 0) {
@@ -26,7 +26,7 @@
 	
 	if ($result->num_rows > 0) {
 		
-		while($row = mysqli_fetch_array($result)) {
+		while($row = $result->fetch_assoc()) {
 			array_push( $reply, 
 			array('first_name'=>$row['first_name'],
 			'last_name'=>$row['last_name'],
