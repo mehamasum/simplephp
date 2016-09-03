@@ -17,14 +17,6 @@
 	$result = $connection->query($sql);
 	
 	if ($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			echo "User: " . $row["first_name"]. " Password: " . $row["password"]. "<br>";
-		}
-	} else {
-		echo "0 results<br>";
-	}
-	
-	if ($result->num_rows > 0) {
 		
 		$row = $result->fetch_assoc();
 		
