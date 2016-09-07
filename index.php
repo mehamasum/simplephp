@@ -1,5 +1,12 @@
 <?php
     session_start();
+    if(isset($_SESSION['email']))
+    {
+        ob_start();
+        header('Location: home.php');
+        ob_end_flush();
+        die();
+    }
 ?>
 
 
@@ -291,26 +298,28 @@
                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
                                 <label>Name</label>
                                 <input type="text" name="name" value="<?php echo $name;?>">
-                                <span class="error">* <?php echo $nameErr;?></span>
+                                <span class="error"><?php echo $nameErr;?></span>
                                 <br />
 
                                 <label>Specialty</label>
                                 <input type="text" name="specialty" value="<?php echo $specialty;?>">
-                                <span class="error">* <?php echo $specialtyErr;?></span>
+                                <span class="error"><?php echo $specialtyErr;?></span>
                                 <br />
 
                                 <label>Email</label>
                                 <input type="text" name="email" value="<?php echo $email;?>">
-                                <span class="error">* <?php echo $emailErr;?></span>
+                                <span class="error"><?php echo $emailErr;?></span>
                                 <br />
 
                                 <label>Password</label>
                                 <input type="password" name="password" required title="8 to 12 characters">
-                                <span class="error">* <?php echo $passwordErr;?></span>
+                                <span class="error"><?php echo $passwordErr;?></span>
                                 <br />
 
                                 <div class="action_btns">
-                                    <input type="submit" name="submit" class="btn" value="Create Account">
+                                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                                    <div class="one_half last"><input type="submit" name="submit" class="btn" value="Create Account"></div>
+                                    
                                 </div>
                             </form>
                         </div>

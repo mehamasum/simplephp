@@ -1,6 +1,14 @@
 <?php
     session_start();
+    if(!isset($_SESSION['email']))
+    {
+        ob_start();
+        header('Location: index.php');
+        ob_end_flush();
+        die();
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html class="no-js">
