@@ -80,85 +80,138 @@
 
         <?php
         // define variables and set to empty values
-        $nameErr = $emailErr = $specialtyErr = $passwordErr = "";
-        $name = $email = $specialty = $password = "";
+        $nameErr = $emailErr = $specialtyErr = $passwordErr = $signin_emailErr = $signin_passwordErr = "";
+        $name = $email = $specialty = $password = $signin_email = $signin_password = "";
         $flag=1;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            if (empty($_POST["name"])) {
-                $nameErr = "Name is required";
-                $flag=0;
+            if(empty($_POST["signin"])) {
 
-            } else {
-                $name = test_input($_POST["name"]);
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                $nameErr = "Only letters and white space allowed"; 
-                $flag=0;
+                if (empty($_POST["name"])) {
+                    $nameErr = "Name is required";
+                    $flag=0;
+
+                } else {
+                    $name = test_input($_POST["name"]);
+                    // check if name only contains letters and whitespace
+                    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                    $nameErr = "Only letters and white space allowed"; 
+                    $flag=0;
+                    }
                 }
+
+                if (empty($_POST["specialty"])) {
+                    $nameErr = "Specialty is required";
+                    $flag=0;
+
+                } else {
+                    $specialty = test_input($_POST["specialty"]);
+                    // check if name only contains letters and whitespace
+                    if (!preg_match("/^[a-zA-Z ]*$/",$specialty)) {
+                    $specialtyErr = "Only letters and white space allowed"; 
+                    $flag=0;
+
+                    }
+                }
+                
+                if (empty($_POST["email"])) {
+                    $emailErr = "Email is required";
+                    $flag=0;
+
+                } else {
+                    $email = test_input($_POST["email"]);
+                    // check if e-mail address is well-formed
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = "Invalid email format"; 
+                    $flag=0;
+
+                    }
+                }
+
+                if (empty($_POST["password"])) {
+                    $passwordErr = "Password is required";
+                    $flag=0;
+
+                } else {
+                    $password = test_input($_POST["password"]);
+                }
+
+                if($flag==1) {
+                    require_once('db-connect.php');
+                    // query
+                    $sql = "SELECT * FROM web_physician WHERE email='$email'";
+                    $result = $connection->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        $emailErr = "Email already used"; 
+                    }
+                    else {
+                        // insert values
+                        $sql = "INSERT INTO web_physician (email, name, specialist, password) VALUES ('" . $email . "','" . $name . "','" . $specialty . "','" . $password . "');";
+                        
+                        if ($connection->query($sql) === TRUE) {
+                            $_SESSION['email']=$email;
+                            ob_start();
+                            header('Location: home.php');
+                            ob_end_flush();
+                            die();
+                        }
+                    }
+                    mysqli_close($connection);
+
+                }
+
             }
 
-            if (empty($_POST["specialty"])) {
-                $nameErr = "Specialty is required";
-                $flag=0;
+            else {
 
-            } else {
-                $specialty = test_input($_POST["specialty"]);
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]*$/",$specialty)) {
-                $specialtyErr = "Only letters and white space allowed"; 
-                $flag=0;
+                if (empty($_POST["signin_email"])) {
+                    $signin_emailErr = "Email is required";
+                    $flag=0;
 
+                } else {
+                    $signin_email = test_input($_POST["signin_email"]);
+                    // check if e-mail address is well-formed
+                    if (!filter_var($signin_email, FILTER_VALIDATE_EMAIL)) {
+                    $signin_emailErr = "Invalid email format"; 
+                    $flag=0;
+
+                    }
                 }
-            }
-            
-            if (empty($_POST["email"])) {
-                $emailErr = "Email is required";
-                $flag=0;
 
-            } else {
-                $email = test_input($_POST["email"]);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format"; 
-                $flag=0;
+                if (empty($_POST["signin_password"])) {
+                    $signin_passwordErr = "Password is required";
+                    $flag=0;
 
+                } else {
+                    $signin_password = test_input($_POST["password"]);
                 }
-            }
 
-            if (empty($_POST["password"])) {
-                $passwordErr = "Password is required";
-                $flag=0;
+                if($flag==1) {
+                    require_once('db-connect.php');
 
-            } else {
-                $password = test_input($_POST["password"]);
-            }
-
-            if($flag==1) {
-                require_once('db-connect.php');
-                // query
-                $sql = "SELECT * FROM web_physician WHERE email='$email'";
-                $result = $connection->query($sql);
-
-                if ($result->num_rows > 0) {
-                    $emailErr = "Email already used"; 
-                }
-                else {
-                    // insert values
-                    $sql = "INSERT INTO web_physician (email, name, specialist, password) VALUES ('" . $email . "','" . $name . "','" . $specialty . "','" . $password . "');";
+                    $sql = "SELECT * FROM web_physician WHERE email='". $signin_email . "' AND password='". $signin_password. "'";
+                    $result = $connection->query($sql);
                     
-                    if ($connection->query($sql) === TRUE) {
-                        $_SESSION['email']=$email;
+                    if ($result->num_rows > 0) {
+                        $_SESSION['email']=$signin_email;
                         ob_start();
                         header('Location: home.php');
                         ob_end_flush();
                         die();
                     }
+                    else {
+                        $signin_emailErr = "Email and password dont match";                        
+                    }
+                    
+
                 }
-                mysqli_close($connection);
 
             }
+
+            mysqli_close($connection);
+
         }
                 
 
@@ -270,13 +323,15 @@
 
                         <!-- Username & Password Login form -->
                         <div class="user_login">
-                            <form>
+                            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
                                 <label>Email</label>
-                                <input type="text" />
+                                <input type="text" name="signin_email" value="<?php echo $email;?>">
+                                <span class="error"><?php echo $signin_emailErr;?></span>
                                 <br />
 
                                 <label>Password</label>
-                                <input type="password" />
+                                <input type="password" name="signin_password" required title="8 to 12 characters">
+                                <span class="error"><?php echo $signin_passwordErr;?></span>
                                 <br />
 
                                 <div class="checkbox">
@@ -286,7 +341,7 @@
 
                                 <div class="action_btns">
                                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                    <div class="one_half last"><a href="#" class="btn">Login</a></div>
+                                    <div class="one_half last"><input type="submit" name="signin" class="btn" value="login"></div>
                                 </div>
                             </form>
 
@@ -318,7 +373,7 @@
 
                                 <div class="action_btns">
                                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                    <div class="one_half last"><input type="submit" name="submit" class="btn" value="Create Account"></div>
+                                    <div class="one_half last"><input type="submit" name="signup" class="btn" value="Create Account"></div>
                                     
                                 </div>
                             </form>

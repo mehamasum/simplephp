@@ -2,6 +2,7 @@ website dir:
 /android
 index.php
 home.php
+logout.php
 /includes
 db-connect.php
 
