@@ -11,7 +11,7 @@
 	 // insert values
 	$sql = "INSERT INTO web_user_info (email, first_name, last_name, sex, dob, weight, height, weight_unit, height_unit, hardwork, password, blood) VALUES ('" . $_POST['email'] . "','" . $_POST['first_name'] . "','" . $_POST['last_name'] . "','" . $_POST['sex'] . "',". $_POST['dob'] . ", ".$_POST['weight'] . " , " . $_POST['height'] . " ,'" . $_POST['weight_unit'] . "','" . $_POST['height_unit'] . "', " .$_POST['hardwork'] . ", '" . $_POST['password'] . "','" . $_POST['blood'] . "');";
 	
-	if ($connection->query($sql) === TRUE) {
+	if ($connection->query($sql) == TRUE) {
 		echo "1";
 	} else {
 		echo "0";
