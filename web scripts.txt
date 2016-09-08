@@ -1,3 +1,16 @@
+website dir:
+/android
+index.php
+home.php
+logout.php
+/includes
+db-connect.php
+
+
+// mysql -u system -p system -h 172.30.137.179 sampledb
+
+
+
 CREATE TABLE web_user_info(
 email VARCHAR(30) PRIMARY KEY,
 first_name VARCHAR(50),
@@ -11,4 +24,22 @@ height_unit VARCHAR(10),
 hardwork INT(2), //
 password VARCHAR(40),
 blood VARCHAR(5));
+
+
+CREATE TABLE web_physician(
+email VARCHAR(30) PRIMARY KEY,
+name VARCHAR(50),
+degree VARCHAR(100),
+specialist VARCHAR(100)
+password VARCHAR(40),
+phone VARCHAR(40),
+location VARCHAR(200),
+visit_hour VARCHAR(200));
+
+CREATE TABLE physician_patient (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+email_doc VARCHAR(30),
+email_patient VARCHAR(30),
+PRIMARY KEY (id)
+);
 
