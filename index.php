@@ -192,6 +192,9 @@
 
                 if($flag==1) {
 
+
+                    require_once('db-connect.php');
+
                     $signin_emailErr = $signin_email . "' AND password='". $signin_password;  
 
                     $sql = "SELECT email, password FROM web_physician";
@@ -206,7 +209,7 @@
                     }
 
 
-                    require_once('db-connect.php');
+
 
                     $sql = "SELECT * FROM web_physician WHERE email='". $signin_email . "' AND password='". $signin_password. "'";
                     $result = $connection->query($sql);
