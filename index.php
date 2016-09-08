@@ -151,6 +151,7 @@
                         $sql = "INSERT INTO web_physician (email, name, specialist, password) VALUES ('" . $email . "','" . $name . "','" . $specialty . "','" . $password . "');";
                         
                         if ($connection->query($sql) === TRUE) {
+                            mysqli_close($connection);
                             $_SESSION['email']=$email;
                             ob_start();
                             header('Location: home.php');
@@ -195,26 +196,11 @@
 
                     require_once('db-connect.php');
 
-                    $signin_emailErr = $signin_email . "' AND password='". $signin_password;  
-
-                    $sql = "SELECT email, password FROM web_physician";
-                    $result = $connection->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                            $signin_emailErr = $signin_emailErr . "User: " . $row["email"]. " Password: " . $row["password"]. "<br>";
-                        }
-                    } else {
-                        $signin_emailErr = signin_emailErr . " 0 results<br>";
-                    }
-
-
-
-
                     $sql = "SELECT * FROM web_physician WHERE email='". $signin_email . "' AND password='". $signin_password. "'";
                     $result = $connection->query($sql);
                     
                     if ($result->num_rows > 0) {
+                        mysqli_close($connection);
                         $_SESSION['email']=$signin_email;
                         ob_start();
                         header('Location: home.php');
@@ -222,7 +208,7 @@
                         die();
                     }
                     else {
-                        $signin_emailErr = $signin_emailErr . " Email and password don't match";                        
+                        $signin_emailErr = "Email and password don't match";                        
                     }
                     
 
@@ -336,8 +322,8 @@
                         <!-- Social Login -->
                         <div class="social_login">
                             <div class="action_btns">
-                                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                                <div class="one_half_old"><a href="#" id="login_form" class="btn">Login</a></div>
+                                <div class="one_half_old last"><a href="#" id="register_form" class="btn">Sign up</a></div>
                             </div>
                         </div>
 
@@ -354,10 +340,10 @@
                                 <span class="error"><?php echo $signin_passwordErr;?></span>
                                 <br />
 
-                                <!--<div class="checkbox">
+                                <div class="checkbox">
                                     <input id="remember" type="checkbox" />
                                     <label for="remember">Remember me</label>
-                                </div>-->
+                                </div>
 
                                 <div class="action_btns">
                                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
@@ -376,7 +362,7 @@
                                 <span class="error"><?php echo $nameErr;?></span>
                                 <br />
 
-                                <label>Specialty</label>
+                                <label>Area of Specialty</label>
                                 <input type="text" name="specialty" value="<?php echo $specialty;?>">
                                 <span class="error"><?php echo $specialtyErr;?></span>
                                 <br />
@@ -393,7 +379,7 @@
 
                                 <div class="action_btns">
                                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                    <div class="one_half last"><input type="submit" name="signup" class="btn" value="Create Account"></div>
+                                    <div class="one_half last"><input type="submit" name="signup" class="btn" value="Sign Up"></div>
                                     
                                 </div>
                             </form>
