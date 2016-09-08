@@ -152,11 +152,11 @@
                                             $doc_email = $_SESSION['email'];
 
                                             $sql = "SELECT * FROM physician_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
-                                            echo $sql . "<br>";
+                                            //echo $sql . "<br>";
                                             $result = $connection->query($sql);
 
                                             $n = $result->num_rows;
-                                            echo $n. " entries<br>";
+                                            //echo $n. " entries<br>";
                                             
 
 
