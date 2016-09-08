@@ -36,7 +36,7 @@ phone VARCHAR(40),
 location VARCHAR(200),
 visit_hour VARCHAR(200));
 
-CREATE TABLE physican_patient (
+CREATE TABLE physician_patient (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 email_doc VARCHAR(30),
 email_patient VARCHAR(30),

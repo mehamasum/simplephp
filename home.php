@@ -17,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>Timer Agency Template</title>
+        <title>HealthPal Web Home</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -151,7 +151,7 @@
 
                                             $doc_email = $_SESSION['email'];
 
-                                            $sql = "SELECT * FROM physican_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
+                                            $sql = "SELECT * FROM physician_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
                                             echo $sql . "<br>";
                                             $result = $connection->query($sql);
 
