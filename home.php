@@ -9,7 +9,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -18,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>HealthPal Web</title>
+        <title>Timer Agency Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -70,192 +69,157 @@
         ==================================================
         Header Section Start
         ================================================== -->
-        <?php include("includes/header.html"); ?>
-        
-            <!--
-            ==================================================
-            Portfolio Section Start
-            ================================================== -->
-            <section class="cd-intro">
-                <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
-                <span>HealthPal Web 2.1</span><br>
-                </span>
-                </h1>
-            </section> <!-- cd-intro -->
-            
-            <section id="works" class="works">
-                <div class="container">
-                    <div class="section-heading">
-                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Patients</h1>
-                        <p class="wow fadeInDown" data-wow-delay=".5s">
-                            Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Dew Drop
-                                </a>
-                                </h4>
-                                <p>
-                                    Redesigne UI Concept
-                                </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Bottle Mockup
-                                </a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit.
-                                </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Table Design
-                                </a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-4.jpg" class="img-responsive" alt="" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Make Up elements
-                                </a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor.
-                                </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-5.jpg" class="img-responsive" alt="" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Shoping Bag Concept
-                                </a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor.
-                                </p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-                                <div class="img-wrapper">
-                                    <img src="images/portfolio/item-6.jpg" class="img-responsive" alt="" >
-                                    <div class="overlay">
-                                        <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Demo</a>
-                                            <a target="_blank" href="single-portfolio.html">Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                <h4>
-                                <a href="#">
-                                    Caramel Bottle
-                                </a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor.
-                                </p>
-                                </figcaption>
-                            </figure>
+         <?php include("includes/header.html"); ?>
+
+
+
+        <!--
+        ==================================================
+        Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>HealthPal Web 2.1</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index.php">
+                                        <i class="ion-ios-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
-            </section> <!-- #works -->
-            
-                            
-            <!--
-            ==================================================
-            Contact Section Start
-            ================================================== -->
-            <section id="call-to-action">
+            </div>
+            </section><!--/#Page header-->
+
+
+            <section id="blog-full-width">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="block">
-                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Feeling the necessity of a new feature?<br>Or something is not working properly? Please let us know.</p>
-                                <a href="index.php" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                        <div class="col-md-4">
+                            <div class="sidebar">
+
+                                <div class="search widget">
+                                    <form action="" method="get" class="searchform" role="search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button"> <i class="ion-search"></i> </button>
+                                            </span>
+                                            </div><!-- /input-group -->
+                                        </form>
+                                    </div>
+
+
+                                    <div class="categories widget">
+                                        <h3 class="widget-head">Categories</h3>
+                                        <ul>
+                                            <li>
+                                                <a href="">New patients</a> <span class="badge">3</span>
+                                            </li>
+                                            <li>
+                                                <a href="">All patients</a> <span class="badge">10</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-8">
+
+                                <section id="works">
+                                    <div class="container">
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-4 col-xs-12">
+                                            <h1>Recent Patients</h1>
+                                            <br><br>
+                                            </div>
+                                        </div>
+
+
+                                        <?php
+
+                                            require_once('db-connect.php');
+
+                                            $doc_email = $_SESSION['email'];
+
+                                            $sql = "SELECT * FROM physican_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
+                                            $result = $connection->query($sql);
+                                            $n = $result->num_rows;
+                                            
+
+
+                                            $count=0;
+                                            for($i=1; $i<=$n; $i++) {
+
+                                                $row = $result->fetch_assoc();
+                                                $client_name = $row["email_patient"];
+
+                                                if($count==0) {
+                                                    echo "<div class='row'>";
+                                                }
+
+                                                echo "
+                                                    <div class='col-sm-3'>
+                                                        <figure class='wow fadeInLeft animated portfolio-item' data-wow-duration='500ms' data-wow-delay='0ms'>
+                                                            <div class='img-wrapper'>
+                                                                <img src='images/portfolio/item-1.jpg' class='img-responsive' alt='this is a title' >
+                                                                <div class='overlay'>
+                                                                    <div class='buttons'>
+                                                                        <a rel='gallery' class='fancybox' href='images/portfolio/item-1.jpg'>Details</a>        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <figcaption>
+                                                                <h4>
+                                                                    <a href='#'>
+                                                                        Dew Drop        
+                                                                    </a>
+                                                                </h4>
+                                                                <p>".
+                                                                    $client_name
+                                                                . "</p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div> ";
+
+                                                    $count++;
+                                                    if($count==3) {
+                                                        echo "</div>";
+                                                        $count=0;
+                                                    }
+
+                                                    
+
+                                                } 
+
+                                                mysqli_close($connection);
+                                            
+                                            ?>
+
+
+                                        </div>
+                                    </div>
+                                </section> <!-- #works -->
+                                
                             </div>
                         </div>
-                        
-                    </div>
-                </div>
-            </section>
-            <!--
-            ==================================================
-            Footer Section Start
-            ================================================== -->
-            <?php include("includes/footer.html"); ?>
-        </body>
-    </html>
+                    </section>
+                    <!--
+                    ==================================================
+                    Footer Section Start
+                    ================================================== -->
+                    <?php include("includes/footer.html"); ?>
+
+
+                </body>
+            </html>
+        </html>
