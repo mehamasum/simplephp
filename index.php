@@ -222,7 +222,7 @@
                         die();
                     }
                     else {
-                        $signin_emailErr = "Email and password don't match";                        
+                        $signin_emailErr = $signin_emailErr . " Email and password don't match";                        
                     }
                     
 
