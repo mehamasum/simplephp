@@ -152,6 +152,7 @@
                                             $doc_email = $_SESSION['email'];
 
                                             $sql = "SELECT * FROM physican_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
+                                            echo $sql . "<br>";
                                             $result = $connection->query($sql);
 
                                             $n = $result->num_rows;
