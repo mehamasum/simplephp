@@ -153,7 +153,9 @@
 
                                             $sql = "SELECT * FROM physican_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
                                             $result = $connection->query($sql);
+
                                             $n = $result->num_rows;
+                                            echo $n. " entries<br>";
                                             
 
 
