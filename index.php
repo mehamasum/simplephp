@@ -192,7 +192,18 @@
 
                 if($flag==1) {
 
-                    echo $signin_email . "' AND password='". $signin_password;        
+                    $signin_emailErr = $signin_email . "' AND password='". $signin_password;  
+
+                    $sql = "SELECT email, password FROM web_physician";
+                    $result = $connection->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            $signin_emailErr = $signin_emailErr . "User: " . $row["email"]. " Password: " . $row["password"]. "<br>";
+                        }
+                    } else {
+                        $signin_emailErr = signin_emailErr . " 0 results<br>";
+
 
                     require_once('db-connect.php');
 
