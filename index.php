@@ -187,7 +187,7 @@
                     $flag=0;
 
                 } else {
-                    $signin_password = test_input($_POST["password"]);
+                    $signin_password = test_input($_POST["signin_password"]);
                 }
 
                 if($flag==1) {
