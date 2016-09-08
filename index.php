@@ -203,6 +203,7 @@
                         }
                     } else {
                         $signin_emailErr = signin_emailErr . " 0 results<br>";
+                    }
 
 
                     require_once('db-connect.php');
