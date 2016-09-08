@@ -166,6 +166,8 @@
 
             else {
 
+                
+
                 if (empty($_POST["signin_email"])) {
                     $signin_emailErr = "Email is required";
                     $flag=0;
@@ -189,6 +191,9 @@
                 }
 
                 if($flag==1) {
+
+                    echo $signin_email . "' AND password='". $signin_password;        
+
                     require_once('db-connect.php');
 
                     $sql = "SELECT * FROM web_physician WHERE email='". $signin_email . "' AND password='". $signin_password. "'";
@@ -202,7 +207,7 @@
                         die();
                     }
                     else {
-                        $signin_emailErr = "Email and password dont match";                        
+                        $signin_emailErr = "Email and password don't match";                        
                     }
                     
 
@@ -325,7 +330,7 @@
                         <div class="user_login">
                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
                                 <label>Email</label>
-                                <input type="text" name="signin_email" value="<?php echo $email;?>">
+                                <input type="text" name="signin_email" value="<?php echo $signin_email;?>">
                                 <span class="error"><?php echo $signin_emailErr;?></span>
                                 <br />
 
@@ -334,14 +339,14 @@
                                 <span class="error"><?php echo $signin_passwordErr;?></span>
                                 <br />
 
-                                <div class="checkbox">
+                                <!--<div class="checkbox">
                                     <input id="remember" type="checkbox" />
                                     <label for="remember">Remember me</label>
-                                </div>
+                                </div>-->
 
                                 <div class="action_btns">
                                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                    <div class="one_half last"><input type="submit" name="signin" class="btn" value="login"></div>
+                                    <div class="one_half last"><input type="submit" name="signin" class="btn" value="Sign In"></div>
                                 </div>
                             </form>
 
