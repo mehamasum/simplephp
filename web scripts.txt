@@ -43,3 +43,18 @@ email_patient VARCHAR(30),
 PRIMARY KEY (id)
 );
 
+
+web_stats( ".
+       "email VARCHAR(100) NOT NULL, ".
+       "id INT NOT NULL, ".
+       "type VARCHAR(40), ".
+       "data DOUBLE, ".
+	   "unit VARCHAR(40),".
+	   "date BIGINT,".
+       "PRIMARY KEY ( email, id )); ";
+	   
+web_timestamp( ".
+"table_name VARCHAR(100) NOT NULL, ".
+"time BIGINT, ".
+"PRIMARY KEY ( table_name )); ";
+
