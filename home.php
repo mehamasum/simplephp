@@ -164,7 +164,15 @@
                                             for($i=1; $i<=$n; $i++) {
 
                                                 $row = $result->fetch_assoc();
-                                                $client_name = $row["email_patient"];
+                                                $client_email = $row["email_patient"];
+
+                                                $sql_new = "SELECT * FROM web_user_info WHERE email='$client_email'";
+            
+
+                                                $result_new = $connection->query($sql_new);
+
+                                                $row_new = $result_new->fetch_assoc();
+                                                $patient_name = $row_new["first_name"];
 
                                                 if($count==0) {
                                                     echo "<div class='row'>";
@@ -174,21 +182,21 @@
                                                     <div class='col-sm-3'>
                                                         <figure class='wow fadeInLeft animated portfolio-item' data-wow-duration='500ms' data-wow-delay='0ms'>
                                                             <div class='img-wrapper'>
-                                                                <img src='images/portfolio/item-1.jpg' class='img-responsive' alt='this is a title' >
+                                                                <img src='images/users/default.jpg' class='img-responsive' alt='this is a title' >
                                                                 <div class='overlay'>
                                                                     <div class='buttons'>
-                                                                        <a rel='gallery' class='fancybox' href='images/portfolio/item-1.jpg'>Details</a>        
+                                                                        <a class='fancybox' href='". "patient_data.php?email=".$client_email ."'>Details</a>        
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <figcaption>
                                                                 <h4>
-                                                                    <a href='#'>
-                                                                        Dew Drop        
-                                                                    </a>
+                                                                    <a href='#'>"
+                                                                        .$patient_name.        
+                                                                    "</a>
                                                                 </h4>
                                                                 <p>".
-                                                                    $client_name
+                                                                    $client_email
                                                                 . "</p>
                                                             </figcaption>
                                                         </figure>

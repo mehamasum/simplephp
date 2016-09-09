@@ -1,0 +1,292 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['email']))
+    {
+        ob_start();
+        header('Location: index.php');
+        ob_end_flush();
+        die();
+    }
+?>
+
+
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <title>Timer Agency Template</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Template CSS Files
+        ================================================== -->
+        <!-- Twitter Bootstrs CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Ionicons Fonts Css -->
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Hero area slider css-->
+        <link rel="stylesheet" href="css/slider.css">
+        <!-- owl craousel css -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <!-- template main css file -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="css/responsive.css">
+        
+        <!-- Template Javascript Files
+        ================================================== -->
+        <!-- google chart js -->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        
+        <!-- modernizr js -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- jquery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- owl carouserl js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- bootstrap js -->
+
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+        <!-- slider js -->
+        <script src="js/slider.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <!-- template main js -->
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        
+        <!--
+        ==================================================
+        Header Section Start
+        ================================================== -->
+        <?php 
+            include("includes/header.html");
+        ?>
+
+        <?php
+            $patient_email = $_GET['email'];
+
+            include('db-connect.php');
+
+            // query
+            $sql = "SELECT * FROM web_user_info WHERE email='$patient_email'";
+            
+
+            $result = $connection->query($sql);
+
+            $row = $result->fetch_assoc();
+            $patient_name = $row["first_name"];
+
+            $patient_sex = $row["sex"];
+
+            $birthDate = date('m/d/Y', $row['dob']);
+            //explode the date to get month, day and year
+            $birthDate = explode("/", $birthDate);
+            //get age from date or birthdate
+            $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
+                ? ((date("Y") - $birthDate[2]) - 1)
+                : (date("Y") - $birthDate[2]));
+            $patient_dob = $age." years";
+
+            $patient_blood = $row["blood"];
+
+            $patient_weight = $row["weight"]." ".$row["weight_unit"];
+            $patient_height = $row["height"]." ".$row["height_unit"];
+
+        ?>
+
+
+        <!--
+        ==================================================
+        Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <?php echo "<h2>".$patient_name ."'s Charts</h2>";?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section><!--/#Page header-->
+
+                <!--data table-->
+                <section id="service-page" class="pages service-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block">
+                                
+                                <div class="row service-parts">
+                                    <div class="col-md-3">
+                                        <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
+                                            <i class="ion-information-circled"></i>
+                                            <?php echo"<h4>$patient_sex</h4>"?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
+                                            <i class="ion-calendar"></i>
+                                            <?php echo"<h4>$patient_dob</h4>"?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
+                                            <i class="ion-speedometer"></i>
+                                            <?php echo"<h4>$patient_weight</h4>"?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
+                                            <i class="ion-waterdrop"></i>
+                                            <?php echo"<h4>$patient_blood</h4>"?>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            
+            <!--data chart-->
+            <?php
+                for($i=0; $i<1 ; $i++) {
+                
+                $type=$title=$v_title="";
+
+                if($i==0) {$type="heart_rate"; $title="Heart rate"; $v_title="BPM";}
+                else if($i==1) {$type="temperature"; $title="Body Temperature";}
+                else if($i==2) {$type="bp";  $title="Blood Pressure"; $v_title="mmHg";}
+                else if($i==3) {$type="bs";  $title="Blood Sugar"; $v_title="mg/dL";}
+                else if($i==4) {$type="weight";  $title="Weight";}
+
+
+                echo "<div class='row'>";
+                echo "
+                    <div id='chart_div".$i."' style='width: auto; height: 600px;'></div>
+                    <script type='text/javascript'>
+                    
+                    // Load the Visualization API and the piechart package.
+                    google.load('visualization', '1', {'packages':['corechart']});
+                    
+                    // Set a callback to run when the Google Visualization API is loaded.
+                    google.setOnLoadCallback(drawChart);
+                    
+                    function drawChart() {
+                    var jsonData = $.ajax({
+                        url: 'grabber.php?email=$patient_email&type=$type',
+                        dataType:'json',
+                        async: false
+                        }).responseText;
+                        
+                    // Create our data table out of JSON data loaded from server.
+                    var data = new google.visualization.DataTable(jsonData);
+                    
+                    var options = {
+                                title: '$title',
+                                vAxis: {
+                                    title: '$v_title'
+                                }
+                                };
+                    
+                    
+                    
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div".$i."'));
+                    chart.draw(data, options);
+                    }
+                    </script>";
+
+                echo "</div>";
+                }
+            ?>
+
+            
+            
+            
+            <!--
+            ==================================================
+            Call To Action Section Start
+            ================================================== -->
+            <section id="call-to-action">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block">
+                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="300ms">SO WHAT YOU THINK ?</h1>
+                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="300ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="300ms">Contact With Me</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!--
+            ==================================================
+            Footer Section Start
+            ================================================== -->
+            <footer id="footer">
+                <div class="container">
+                    <div class="col-md-8">
+                        <p class="copyright">Copyright: <span>2015</span> . Design and Developed by <a href="https://www.themefisher.com/free-bootstrap-templates/">Themefisher</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Social Media -->
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="Facebook">
+                                    <i class="ion-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Twitter">
+                                    <i class="ion-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Linkedin">
+                                    <i class="ion-social-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Google Plus">
+                                    <i class="ion-social-googleplus"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                </footer> <!-- /#footer -->
+                
+            </body>
+        </html>
+    </html>
