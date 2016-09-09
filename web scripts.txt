@@ -27,11 +27,11 @@ blood VARCHAR(5));
 
 
 CREATE TABLE web_physician(
-email VARCHAR(30) PRIMARY KEY,
-name VARCHAR(50),
+email VARCHAR(30) PRIMARY KEY, //
+name VARCHAR(50), //
 degree VARCHAR(100),
-specialist VARCHAR(100)
-password VARCHAR(40),
+specialist VARCHAR(100) //
+password VARCHAR(40), //
 phone VARCHAR(40),
 location VARCHAR(200),
 visit_hour VARCHAR(200));

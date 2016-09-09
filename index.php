@@ -148,7 +148,8 @@
                     }
                     else {
                         // insert values
-                        $sql = "INSERT INTO web_physician (email, name, specialist, password) VALUES ('" . $email . "','" . $name . "','" . $specialty . "','" . $password . "');";
+                        $sql = "INSERT INTO web_physician (email, name, specialist, password, degree, phone, location, visit_hour)".
+                                " VALUES ('" . $email . "','" . $name . "','" . $specialty . "','" . $password . "', 'No educational info', 'No phone info', 'No location info', 'No visiting hours info');";
                         
                         if ($connection->query($sql) === TRUE) {
                             mysqli_close($connection);
