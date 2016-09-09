@@ -245,7 +245,7 @@
             ==================================================
             Footer Section Start
             ================================================== -->
-            <?php include('/includes/footer.html'); ?>
+            <?php include("includes/footer.html"); ?>
                 
             </body>
         </html>
