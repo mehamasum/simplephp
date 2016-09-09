@@ -1,6 +1,6 @@
 <?php
 
-	require 'connect.inc.php';
+	require_once('db-connect.php');
 	
 	$create_table_stat = "CREATE TABLE web_stats( ".
        "email VARCHAR(100) NOT NULL, ".
@@ -34,8 +34,8 @@
 
 	
 	//$result = $connection->query($create_table_stat);
-	//$result = $connection->query($create_table_timestamp);
-	$result = $connection->query($create_table_user_info);
+	$result = $connection->query($create_table_timestamp);
+	//$result = $connection->query($create_table_user_info);
 	if ($result==TRUE) {
 		echo "0\n";
 	}
