@@ -90,6 +90,7 @@
                                         Home
                                     </a>
                                 </li>
+                                <li class="active">Patients</li>
                             </ol>
                         </div>
                     </div>
@@ -139,7 +140,7 @@
                                         
                                         <div class="row">
                                             <div class="col-sm-4 col-xs-12">
-                                            <h1>Recent Patients</h1>
+                                            <h1>All Patients</h1>
                                             <br><br>
                                             </div>
                                         </div>
@@ -151,7 +152,7 @@
 
                                             $doc_email = $_SESSION['email'];
 
-                                            $sql = "SELECT * FROM physician_patient WHERE email_doc='". $doc_email. "' LIMIT 10 ";
+                                            $sql = "SELECT * FROM physician_patient WHERE email_doc='". $doc_email. "'";
                                             //echo $sql . "<br>";
                                             $result = $connection->query($sql);
 

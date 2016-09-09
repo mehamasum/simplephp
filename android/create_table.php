@@ -1,6 +1,6 @@
 <?php
 
-	require 'connect.inc.php';
+	require_once('../db-connect.php');
 	
 	$create_table_stat = "CREATE TABLE web_stats( ".
        "email VARCHAR(100) NOT NULL, ".

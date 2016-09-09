@@ -27,11 +27,11 @@ blood VARCHAR(5));
 
 
 CREATE TABLE web_physician(
-email VARCHAR(30) PRIMARY KEY,
-name VARCHAR(50),
+email VARCHAR(30) PRIMARY KEY, //
+name VARCHAR(50), //
 degree VARCHAR(100),
-specialist VARCHAR(100)
-password VARCHAR(40),
+specialist VARCHAR(100) //
+password VARCHAR(40), //
 phone VARCHAR(40),
 location VARCHAR(200),
 visit_hour VARCHAR(200));
@@ -42,4 +42,19 @@ email_doc VARCHAR(30),
 email_patient VARCHAR(30),
 PRIMARY KEY (id)
 );
+
+
+web_stats( ".
+       "email VARCHAR(100) NOT NULL, ".
+       "id INT NOT NULL, ".
+       "type VARCHAR(40), ".
+       "data DOUBLE, ".
+	   "unit VARCHAR(40),".
+	   "date BIGINT,".
+       "PRIMARY KEY ( email, id )); ";
+	   
+web_timestamp( ".
+"table_name VARCHAR(100) NOT NULL, ".
+"time BIGINT, ".
+"PRIMARY KEY ( table_name )); ";
 
