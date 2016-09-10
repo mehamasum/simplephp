@@ -48,8 +48,10 @@
 
 	echo json_encode($reply); 
 	
+	mysqli_close($connection);
+	
  }
 	
-mysqli_close($connection);
+
  
 ?>
