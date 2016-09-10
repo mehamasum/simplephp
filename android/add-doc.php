@@ -1,6 +1,6 @@
 <?php
  
- // android/user-login.php?auth=XXX
+ // android/add-doc.php?auth=XXX
  
  $auth = $_GET['auth'];
 
