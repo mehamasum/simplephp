@@ -1068,7 +1068,7 @@ article {
   margin-bottom: 0;
   margin-top: -5px;
   background: #fff;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15);
 }
 .nav .open > a,
@@ -1082,7 +1082,7 @@ article {
   line-height: normal;
   text-decoration: none;
   padding: 8px 0;
-  color: #fff;
+  color: #000000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
