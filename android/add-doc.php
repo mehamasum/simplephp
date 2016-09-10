@@ -1,4 +1,4 @@
-<?php
+﻿<?php
  
  // android/add-doc.php?auth=XXX
  
@@ -26,9 +26,8 @@
 	
 	if ($result->num_rows==0) { //add to the list
 		// query
-		$sql = "INSERT INTO physician_patient (email_doc, email_patient) VALUES ('$doc', '$email')";
-		$result = $connection->query($sql);
-		if ($connection->query($sql) == FALSE) {
+		$sql_insert = "INSERT INTO physician_patient (email_doc, email_patient) VALUES ('$doc', '$email')";
+		if ($connection->query($sql_insert) == FALSE) {
 			echo "1";
 			die();
 		}
@@ -51,5 +50,4 @@
  }
 	
 mysqli_close($connection);
- 
 ?>
