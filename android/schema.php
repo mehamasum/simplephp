@@ -43,7 +43,7 @@
 
 	
 	//$result = $connection->query($create_table_stat);
-	$result = $connection->query($create_table_timestamp);
+	$result = $connection->query($create_table_appointment);
 	//$result = $connection->query($create_table_user_info);
 	if ($result==TRUE) {
 		echo "0\n";
