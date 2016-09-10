@@ -37,7 +37,6 @@ location VARCHAR(200),
 visit_hour VARCHAR(200));
 
 CREATE TABLE physician_patient (
-id MEDIUMINT NOT NULL AUTO_INCREMENT,
 email_doc VARCHAR(30),
 email_patient VARCHAR(30),
 PRIMARY KEY (id)
@@ -53,8 +52,8 @@ web_stats( ".
 	   "date BIGINT,".
        "PRIMARY KEY ( email, id )); ";
 	   
-web_timestamp( ".
-"table_name VARCHAR(100) NOT NULL, ".
-"time BIGINT, ".
-"PRIMARY KEY ( table_name )); ";
-
+	$create_table_timestamp = "CREATE TABLE web_timestamp( ".
+		"email VARCHAR(100) NOT NULL, ".
+       "table_name VARCHAR(100) NOT NULL, ".
+       "time BIGINT, ".
+       "PRIMARY KEY ( email,table_name )); ";
