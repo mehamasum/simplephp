@@ -38,7 +38,7 @@
 		"patient_email VARCHAR(50), ".
 		"date BIGINT, ".
 		"time BIGINT, ".
-		"status INT );";
+		"status INT );"; // 1=pending, 2= ac, 3=wa
 
 
 	
