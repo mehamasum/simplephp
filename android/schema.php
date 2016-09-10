@@ -31,6 +31,15 @@
 		"hardwork INT(2), ".
 		"password VARCHAR(40), ".
 		"blood VARCHAR(5));";
+	
+	$create_table_appointment = "CREATE TABLE web_appointment( ".
+		"token INT PRIMARY KEY AUTO_INCREMENT, ".
+		"doc_email VARCHAR(50), ".
+		"patient_email VARCHAR(50), ".
+		"date BIGINT, ".
+		"time BIGINT, ".
+		"status INT );";
+
 
 	
 	//$result = $connection->query($create_table_stat);
