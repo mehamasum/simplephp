@@ -52,7 +52,18 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
-		
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.timepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css" />
+
+        <script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker.css" />
+
+        <script type="text/javascript" src="lib/site.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/site.css" />
+                
 		
 		
     </head>
@@ -123,6 +134,7 @@
         ================================================== 
             Service Page Section  Start
         ================================================== -->
+       
         
 
         <!-- 
@@ -131,10 +143,10 @@
         ================================================== -->
         <section class="works service-page">
             <div class="container">
-                <h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">Some Of Our Features Works</h2>
-                    <p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">
-                        Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
-                    </p>
+               
+                <br><br>
+
+
                 <div class="row">
                     <div class="col-sm-6">
                          <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
@@ -145,52 +157,37 @@
                                 </h4>
                                 <p>
                                     Date : 27 martch 2016
-                                </p>
-								<br>
-								<br>
-								<br>
-								
-								
-								
-								
-								
-                                <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" >
-                                <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-                                
-								<div class="well">
-                                <div id="datetimepicker3" class="input-append">
-                                    <input data-format="hh:mm:ss" type="text"></input>
-                                    <span class="add-on">
-                                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                                    </i>
-                                    </span>
-                                </div>
+                                </p>                            
                                 <br>
-                                <a href="single-post.html">Confirm</a>
-                                </div>
-                                <br><br>                      
-                                <a href="single-post.html">Decline</a>
 
-                                <script type="text/javascript"
-                                src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-                                </script> 
-                                <script type="text/javascript"
-                                src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+                                              
+
+                                <div class="contact-form">
+                                <form id="contact-form" method="post"> 
+                        
+                                    <div class="form-group">
+                                        <label>Schedule at :</label>
+                                        <input type="text" class="time" name="name" id="name">                                        
+                                    </div>
+
+                                    <div >
+                                            <input type="submit" id="ac" class="btn btn-default btn-send" value="Confirm">
+                                            <input type="submit" id="wa" class="btn btn-default btn-send" value="Decline">
+                                            
+                                    </div>
+                                </form>
+                                
+                                </div>
+                                <script>
+                                        $(function() {
+                                            $('#name').timepicker();
+                                            $('#name').timepicker('setTime', new Date());
+                                            $('#name').on('changeTime', function() {
+                                                $('#onselectTarget').text($(this).val());
+                                            });
+                                        });
                                 </script>
-                                <script type="text/javascript"
-                                src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-                                </script>
-                                <script type="text/javascript"
-                                src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-                                </script>
-                                <script type="text/javascript">
-                                $(function() {
-                                    $('#datetimepicker3').datetimepicker({
-                                    pickDate: false
-                                    });
-                                });
-                                </script>
-								
+
 								
 								
 								
@@ -202,32 +199,14 @@
     
                 </div>
 				
-				<div class="row">
-                    <div class="col-sm-6">
-                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                            
-                            <figcaption>
-                                <h4>
-                                    Name
-                                </h4>
-                                <p>
-                                    Date : 27 martch 2016
-                                </p>
-								<br>
-								<br>
-								<br>
-								
-								<a href="single-post.html">Decline</a>
-								<br>
-								<a href="single-post.html">Schedule a time</a>
-                            </figcaption>
-										
-                        </figure>
-                    </div>
-    
-                </div>
+				
             </div>
         </section>
+
+
+
+
+        <!---->
 		
 		
 		

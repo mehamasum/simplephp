@@ -16,7 +16,7 @@
 	$sql = "SELECT * FROM web_physician WHERE email='". $doc."'";
 	$result = $connection->query($sql);
 	if ($result->num_rows==0) { //no doc !
-		echo "0";
+		echo "0\n";
 		die();
 	}
 	
@@ -28,7 +28,7 @@
 		// query
 		$sql_insert = "INSERT INTO physician_patient (email_doc, email_patient) VALUES ('$doc', '$email')";
 		if ($connection->query($sql_insert) == FALSE) {
-			echo "1";
+			echo "1\n";
 			die();
 		}
 	}

@@ -36,14 +36,14 @@
 		"token INT PRIMARY KEY AUTO_INCREMENT, ".
 		"doc_email VARCHAR(50), ".
 		"patient_email VARCHAR(50), ".
-		"date BIGINT, ".
+		"date VARCHAR(20), ".
 		"time BIGINT, ".
-		"status INT );";
+		"status INT );"; // 1=pending, 2= ac, 3=wa
 
 
 	
 	//$result = $connection->query($create_table_stat);
-	$result = $connection->query($create_table_timestamp);
+	$result = $connection->query($create_table_appointment);
 	//$result = $connection->query($create_table_user_info);
 	if ($result==TRUE) {
 		echo "0\n";

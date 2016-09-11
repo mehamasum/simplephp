@@ -1068,7 +1068,7 @@ article {
   margin-bottom: 0;
   margin-top: -5px;
   background: #fff;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(220, 220, 220, 0.95);
   box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15);
 }
 .nav .open > a,
