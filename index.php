@@ -263,11 +263,11 @@
                         <ul class="nav navbar-nav navbar-right">
 
                             <li>
-                                <a href="index.php" >Log In</a>
+                                <a href="#feature" >Features</a>
                             </li>
 
                             <li>
-                                <a href="index.php" >Features</a>
+                                <a href="#about" >Mobile App</a>
                             </li>
                   
                             <li><a href="#contact-section">Contact Us</a></li>
@@ -286,20 +286,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <div class="block wow fadeInUp" data-wow-delay=".3s">
+                        <div class="block" >
                             
                             <!-- Slider -->
                             <section class="cd-intro">
-                                <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
+                                <h1 >
                                 <span>HealthPal Web 2.1</span><br>
                                 </span>
                                 </h1>
                                 </section> <!-- cd-intro -->
                                 <!-- /.slider -->
-                                <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
-                                    A Great way for physicians to be in touch with patients.<br>Monitor patients vitals, handle appointment requests - all from one place.
+                                <h2>
+                                    A Great way for physicians to be in touch with patients.<br>Monitor health data, handle appointment requests - all from one place.
                                 </h2>
-                                <a rel="leanModal" class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#modal" data-section="#works" >Get Connected</a>
+                                <a rel="leanModal" class="btn btn-default btn-green" data-wow-delay=".9s" href="#modal" data-section="#works" >Register or Login</a>
                                 <!--<a href="#modal" class="btn">Connect</a>-->
                                 
                             </div>
@@ -431,10 +431,11 @@
             
             <!--
             ==================================================
-            Portfolio Section Start
+            Feature Section Start
             ================================================== -->
-            <section id="feature">
+            <section id="feature" class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="300ms">
                 <div class="container">
+                <br><br><br>
                     <div class="section-heading">
                         <h1 class="title wow fadeInDown" data-wow-delay=".3s">New set of features</h1>
                         <p class="wow fadeInDown" data-wow-delay=".5s">
@@ -451,7 +452,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Monitor Patients</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                                    <p>Monitor patients' health data synced from client side mobile app.</p>
                                 </div>
                             </div>
                         </div>
@@ -464,7 +465,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Cloud sync</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                                    <p>Health data is synchronized between mobile app and cloud.</p>
                                 </div>
                             </div>
                         </div>
@@ -477,7 +478,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Online Appointments</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                                    <p>Handle appointment requests directly from the web.</p>
                                 </div>
                             </div>
                         </div>
@@ -493,6 +494,7 @@
             ================================================== -->
             <section id="about">
                 <div class="container">
+                <br><br><br>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
@@ -500,10 +502,10 @@
                                 Works great with patient side mobile app!
                                 </h2>
                                 <p>
-                                    Hello, I’m a UI/UX Designer and Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries
+                                    HealthPal mobile app synchronizes data between mobile devices and web. 
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero.
+                                    Physicians can monitor their patients' data from the web. Patients can also request for online appointments directly from the app.
                                 </p>
                             </div>
                             
@@ -525,19 +527,16 @@
         ================================================== -->
         <section id="contact-section">
             <div class="container">
-
-                <div class="section-heading">
-                        <h2 class="subtitle  wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Find Us</h2>
-                            <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
-                                Si aute quis eu proident o cupidatat ne anim nescius, et est praesentibus, o quorum vidisse expetendis, nostrud eram quibusdam ad nam nostrud ubi.
-                                
-                            </p>
-                    </div>
-
                 <div class="row">
-                
-                    <div class="col-md-12">
-                         <div class="map-area wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">
+                    <div class="section-heading">
+                        <h1 class="title wow fadeInDown" data-wow-delay=".3s">Find Us</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".5s">
+                            Team HealthPal is at your service 24x7!
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-12" text-center>
+                         <div class="map-area">
                             <div class="map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.277552998015!2d90.3678744!3d23.773128800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0ae4adf3cb9%3A0x7f2cf443b764e4a4!2sShishu+Mela!5e0!3m2!1sen!2s!4v1435516022247" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 
@@ -546,28 +545,23 @@
                     </div>
                 </div>
                 <div class="row address-details">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                             <i class="ion-ios-location-outline"></i>
-                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
+                            <h5>University of Dhaka, Bangladesh</h5>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                            <i class="ion-ios-location-outline"></i>
-                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
+                
+                    <div class="col-md-4">
                         <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                             <i class="ion-ios-email-outline"></i>
-                            <p>support@themefisher.com<br>support@themefisher.com</p>
+                            <h5>support@healthpal.com</h5>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                             <i class="ion-ios-telephone-outline"></i>
-                            <p>+07 052 245 022<br>+07 999 999 999</p>
+                            <h5>+880 152 111 20 85</h5>
                         </div>
                     </div>
                 </div>
