@@ -135,7 +135,7 @@
                             <div class="col-md-8">
 
                                 <section id="works">
-                                    <div class="container">
+
                                         
                                         <div class="row">
                                             <div class="col-sm-4 col-xs-12">
@@ -179,7 +179,7 @@
                                                 }
 
                                                 echo "
-                                                    <div class='col-sm-3'>
+                                                    <div class='col-sm-4'>
                                                         <figure class='wow fadeInLeft animated portfolio-item' data-wow-duration='500ms' data-wow-delay='0ms'>
                                                             <div class='img-wrapper'>
                                                                 <img src='images/users/default.jpg' class='img-responsive' alt='this is a title' >
@@ -217,8 +217,8 @@
                                             ?>
 
 
-                                        </div>
-                                    </div>
+
+
                                 </section> <!-- #works -->
                                 
                             </div>
