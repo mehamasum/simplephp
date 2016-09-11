@@ -39,7 +39,7 @@
 	else if($mode == '0'){
 						
 			
-		$sql = "INSERT INTO web_appointment (doc_email, patient_email, date, time, status) VALUES ( '". $_POST['doc_email'] . "'," . $email . "," . $_POST['date'] . "," . "0" . ",". $_POST['status']  . " );";
+		$sql = "INSERT INTO web_appointment (doc_email, patient_email, date, time, status) VALUES ( '". $_POST['doc_email'] . "'," . $email . "," . $_POST['date'] . "," . "'0'" . ",". $_POST['status']  . " );";
 
 		if ($connection->query($sql) == TRUE) {
 			
