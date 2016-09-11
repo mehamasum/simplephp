@@ -189,7 +189,7 @@
                                                                 ".$patient_name."
                                                             </h3>
                                                             <h4>
-                                                                Date : ".$row["date"]."
+                                                                Date : ".date('d M Y', $row["date"]/1000)."
                                                             </h4>                            
                                                             <br>
 

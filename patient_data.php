@@ -97,14 +97,10 @@
 
             $patient_sex = $row["sex"];
 
-            $birthDate = date('m/d/Y', $row['dob']);
-            //explode the date to get month, day and year
-            $birthDate = explode("/", $birthDate);
-            //get age from date or birthdate
-            $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
-                ? ((date("Y") - $birthDate[2]) - 1)
-                : (date("Y") - $birthDate[2]));
-            $patient_dob = $age." years";
+            $birthDate = date('Y-m-d', $row['dob']/1000);
+            //$dob='1981-10-07';
+            $diff = (date('Y') - date('Y',strtotime($birthDate)));
+            $patient_dob = $diff." years";
 
             $patient_blood = $row["blood"];
 

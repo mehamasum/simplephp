@@ -31,7 +31,7 @@ if($type=='bp') {
 
         $temp = array();
         
-        $temp[] = array('v' => date('m/d/y', $row1['date']));
+        $temp[] = array('v' => date('d M', $row1['date']/1000));
         
         //convert the data in case of unit conflict
         $temp[] = array('v' => doubleval($row1['data'])); 
@@ -61,7 +61,7 @@ else {
     foreach($result as $row){
         $temp = array();
         
-        $temp[] = array('v' => date('m/d/y', $row['date']));
+        $temp[] = array('v' => date('d M', $row['date']/1000));
         
         //convert the data in case of unit conflict
         $temp[] = array('v' => doubleval($row['data'])); 
