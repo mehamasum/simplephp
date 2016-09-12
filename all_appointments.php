@@ -253,6 +253,10 @@
                                                                 </p> ";
                                                              }
                                                             
+                                                            
+
+                                                            if($status==1) {
+
                                                             echo "<br> 
 
 
@@ -261,7 +265,6 @@
                                                         
                                                                     <div class='form-group'>";
 
-                                                                    if($status==1) {
                                                                         echo "
                                                                         <label>Schedule at :</label>
                                                                         <input type='text' class='time' name='time' id='time".$i."'>                                        
@@ -287,7 +290,7 @@
                                                                         var canvas = document.getElementById('circlecanvas".$i."');
                                                                         var context = canvas.getContext('2d');
                                                                         context.arc(50, 50, 50, 0, Math.PI * 2, false);
-                                                                        context.fillStyle = '#005AA2';
+                                                                        context.fillStyle = 'orange';
                                                                         context.fill();              
                                                                     });
                                                             </script> ";
