@@ -27,6 +27,11 @@ ul li {
 h2 {
   font-size: 26px;
 }
+
+#bg {
+    background-color:#f2f2f2;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -878,6 +883,7 @@ ul.social-icons li {
   background: #00A6BB;
 }
 #blog-full-width {
+  background-color:#f2f2f2;
   padding: 40px 0 80px;
 }
 article {
@@ -921,9 +927,10 @@ article {
   margin-top: 30px;
 }
 .sidebar {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 .sidebar .widget {
+  background: #FCFCFC;
   margin-bottom: 40px;
   padding: 15px;
   border: 1px solid #dedede;

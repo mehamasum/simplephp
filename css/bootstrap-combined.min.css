@@ -731,7 +731,6 @@ abbr[data-original-title] {
 }
 abbr.initialism {
     font-size: 90%;
-    text-transform: uppercase
 }
 blockquote {
     padding: 0 0 0 15px;
@@ -3276,7 +3275,6 @@ input[type="submit"].btn.btn-mini {
     line-height: 20px;
     color: #999;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    text-transform: uppercase
 }
 .nav li+.nav-header {
     margin-top: 9px

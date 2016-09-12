@@ -18,7 +18,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>HealthPal Web</title>
+        <title>LiveHealthy Web</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -289,9 +289,9 @@
                         <div class="block" >
                             
                             <!-- Slider -->
-                            <section class="cd-intro">
+                            <section class="">
                                 <h1 >
-                                <span>HealthPal Web 2.1</span><br>
+                                <span>LiveHealthy Web</span><br>
                                 </span>
                                 </h1>
                                 </section> <!-- cd-intro -->
@@ -502,10 +502,10 @@
                                 Works great with patient side mobile app!
                                 </h2>
                                 <p>
-                                    HealthPal mobile app synchronizes data between mobile devices and web. 
+                                    LiveHealthy mobile app synchronizes data between mobile devices and web. Physicians can monitor their patients' data directly from the web. 
                                 </p>
                                 <p>
-                                    Physicians can monitor their patients' data from the web. Patients can also request for online appointments directly from the app.
+                                    Patients can also request for online appointments directly from the app. Physicians can accept appointment requests and notify patients in real time.
                                 </p>
                             </div>
                             
@@ -531,14 +531,14 @@
                     <div class="section-heading">
                         <h1 class="title wow fadeInDown" data-wow-delay=".3s">Find Us</h1>
                         <p class="wow fadeInDown" data-wow-delay=".5s">
-                            Team HealthPal is at your service 24x7!
+                            Team LiveHealthy is at your service 24x7!
                         </p>
                     </div>
                     
                     <div class="col-md-12" text-center>
                          <div class="map-area">
                             <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.277552998015!2d90.3678744!3d23.773128800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0ae4adf3cb9%3A0x7f2cf443b764e4a4!2sShishu+Mela!5e0!3m2!1sen!2s!4v1435516022247" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14609.77511960395!2d90.3924947!3d23.7315492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7092a9c25197fa4!2sUniversity+of+Dhaka!5e0!3m2!1sen!2sbd!4v1473675779761" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 
                             </div>
                         </div>
@@ -555,7 +555,7 @@
                     <div class="col-md-4">
                         <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                             <i class="ion-ios-email-outline"></i>
-                            <h5>support@healthpal.com</h5>
+                            <h5>support@LiveHealthy.com</h5>
                         </div>
                     </div>
                     <div class="col-md-4">

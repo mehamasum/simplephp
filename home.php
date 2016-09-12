@@ -17,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>HealthPal Web Home</title>
+        <title>LiveHealthy Web</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <h2>HealthPal Web 2.1</h2>
+                            <h2>LiveHealthy Web 2.1</h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="index.php">
