@@ -63,6 +63,32 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+
+        <script>
+        function showResult(str) {
+        if (str.length==0) { 
+            document.getElementById("livesearch").innerHTML="";
+            document.getElementById("livesearch").style.border="0px";
+            return;
+        }
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        } else {  // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+            document.getElementById("livesearch").innerHTML=this.responseText;
+            document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+            }
+        }
+        xmlhttp.open("GET","search.php?auth=01521112085&q="+str,true);
+        xmlhttp.send();
+        }
+        </script>
+
+
     </head>
     <body>
         <!--
@@ -108,26 +134,57 @@
                                 <div class="search widget">
                                     <form action="" method="get" class="searchform" role="search">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <input type="text" onkeyup="showResult(this.value)" class="form-control" placeholder="Search for...">
+                                            
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default" type="button"> <i class="ion-search"></i> </button>
                                             </span>
                                             </div><!-- /input-group -->
                                         </form>
+                                            <div id="livesearch"></div>
+                                        
                                     </div>
+
+
+                                    <?php
+
+                                            require_once('db-connect.php');
+
+                                            $doc_email = $_SESSION['email'];
+
+                                            $sql = "SELECT * FROM physician_patient WHERE email_doc='". $doc_email. "'";
+                                            $result = $connection->query($sql);
+
+                                            $total = $result->num_rows;
+
+                                            $sql = "SELECT * FROM web_appointment WHERE doc_email='". $doc_email. "' AND status=1";
+                                            $result = $connection->query($sql);
+
+                                            $appoints = $result->num_rows;
+
+                                            $sql = "SELECT * FROM web_appointment WHERE doc_email='". $doc_email. "' LIMIT 30";
+                                            $result = $connection->query($sql);
+                                            $latest = $result->num_rows;
+
+                                    ?>
 
 
                                     <div class="categories widget">
-                                        <h3 class="widget-head">Categories</h3>
+                                        <h3 class="widget-head">Quick Links</h3>
                                         <ul>
                                             <li>
-                                                <a href="">New patients</a> <span class="badge">3</span>
+                                                <a href="patients.php">All patients</a> <span class="badge"><?php echo $total?></span>
                                             </li>
                                             <li>
-                                                <a href="">All patients</a> <span class="badge">10</span>
+                                                <a href="appointments.php">Pending appointments</a> <span class="badge"><?php echo $appoints ?></span>
+                                            </li>
+
+                                            <li>
+                                                <a href="all_appointments.php">All latest appointments</a> <span class="badge"><?php echo $latest ?></span>
                                             </li>
                                         </ul>
                                     </div>
+                                    
                                     
                                 </div>
                             </div>
@@ -146,8 +203,6 @@
 
 
                                         <?php
-
-                                            require_once('db-connect.php');
 
                                             $doc_email = $_SESSION['email'];
 
@@ -172,7 +227,7 @@
                                                 $result_new = $connection->query($sql_new);
 
                                                 $row_new = $result_new->fetch_assoc();
-                                                $patient_name = $row_new["first_name"];
+                                                $patient_name = $row_new["first_name"]." ".$row_new["last_name"];
 
                                                 if($count==0) {
                                                     echo "<div class='row'>";
@@ -191,7 +246,7 @@
                                                             </div>
                                                             <figcaption>
                                                                 <h4>
-                                                                    <a href='#'>"
+                                                                    <a href='". "patient_data.php?email=".$client_email ."'>"
                                                                         .$patient_name.        
                                                                     "</a>
                                                                 </h4>

@@ -103,7 +103,7 @@
                                         Home
                                     </a>
                                 </li>
-                                <li class="active">Appointments</li>
+                                <li class="active">All Appointments</li>
                             </ol>
                         </div>
                     </div>
@@ -157,6 +157,7 @@
                                         </ul>
                                     </div>
                                     
+                                    
                                 </div>
                             </div>
 
@@ -167,7 +168,7 @@
                                         
                                         <div class="row">
                                             <div class="col-sm-8 col-xs-12">
-                                            <h1>Appointment Requests</h1>
+                                            <h1>Last 30 Appointment Requests</h1>
                                             <br><br>
                                             </div>
                                         </div>
@@ -177,7 +178,7 @@
 
                                             $doc_email = $_SESSION['email'];
 
-                                            $sql = "SELECT * FROM web_appointment WHERE doc_email='". $doc_email. "' AND status=1";
+                                            $sql = "SELECT * FROM web_appointment WHERE doc_email='". $doc_email. "' ORDER BY token DESC LIMIT 30";
                                             //echo $sql . "<br>";
                                             $result = $connection->query($sql);
 
@@ -193,6 +194,7 @@
                                                 $row = $result->fetch_assoc();
                                                 $client_email = $row["patient_email"];
                                                 array_push($token, $row['token']);
+                                                $status = $row["status"];
 
                                                 $sql_new = "SELECT * FROM web_user_info WHERE email='$client_email'";
             
@@ -219,19 +221,48 @@
                                                             <h4>
                                                                 Date : ".date('d M Y', $row["date"]/1000)."
                                                             </h4>                            
-                                                            <br>
+                                                            <br>";
 
-                                                             <p id='status".$i."'>
-                                                                Status : Pending
-                                                            </p> 
+                                                             if($status==1) {
+                                                                 echo "
+                                                                <p id='status".$i."'>
+                                                                    Status : Pending
+                                                                </p> ";
+                                                             }
+
+                                                             else if($status==2) {
+
+                                                                $token_serch = "SELECT * FROM web_appointment WHERE token=".$row['token'];
+                                                                            
+
+                                                                $result_token_serch = $connection->query($token_serch);
+
+                                                                $row_token_serch = $result_token_serch->fetch_assoc();
+                                                                $time_given = $row_token_serch['time'];
+
+                                                                 echo "
+                                                                <p id='status".$i."'>
+                                                                    Status : Scheduled at $time_given
+                                                                </p> ";
+                                                             }
+
+                                                             else if($status==3) {
+                                                                 echo "
+                                                                <p id='status".$i."'>
+                                                                    Status : Declined
+                                                                </p> ";
+                                                             }
                                                             
-                                                            <br> 
+                                                            echo "<br> 
 
 
                                                             <div class='contact-form'>
                                                                 <form>
                                                         
-                                                                    <div class='form-group'>
+                                                                    <div class='form-group'>";
+
+                                                                    if($status==1) {
+                                                                        echo "
                                                                         <label>Schedule at :</label>
                                                                         <input type='text' class='time' name='time' id='time".$i."'>                                        
                                                                     </div>
@@ -244,10 +275,11 @@
                                                                     </div>
                                                                 </form>
                                                             
-                                                            </div>
+                                                            </div>"; }
 
                                                             
-
+                                                            if($status==1) {
+                                                            echo "
                                                             <script>
                                                                     $(function() {
                                                                         $('#time".$i."').timepicker();
@@ -258,8 +290,40 @@
                                                                         context.fillStyle = '#005AA2';
                                                                         context.fill();              
                                                                     });
-                                                            </script>
-                                                            </div>
+                                                            </script> ";
+                                                            }
+
+                                                            else if($status==2) {
+                                                            echo "
+                                                            <script>
+                                                                    $(function() {
+                                                                        $('#time".$i."').timepicker();
+                                                                        $('#time".$i."').timepicker('setTime', new Date()); 
+                                                                        var canvas = document.getElementById('circlecanvas".$i."');
+                                                                        var context = canvas.getContext('2d');
+                                                                        context.arc(50, 50, 50, 0, Math.PI * 2, false);
+                                                                        context.fillStyle = 'green';
+                                                                        context.fill();              
+                                                                    });
+                                                            </script> ";
+                                                            }
+
+                                                            else if($status==3) {
+                                                            echo "
+                                                            <script>
+                                                                    $(function() {
+                                                                        $('#time".$i."').timepicker();
+                                                                        $('#time".$i."').timepicker('setTime', new Date()); 
+                                                                        var canvas = document.getElementById('circlecanvas".$i."');
+                                                                        var context = canvas.getContext('2d');
+                                                                        context.arc(50, 50, 50, 0, Math.PI * 2, false);
+                                                                        context.fillStyle = 'red';
+                                                                        context.fill();              
+                                                                    });
+                                                            </script> ";
+                                                            }
+                                                            
+                                                            echo "</div>
                                                                                                                   
                                                         </figcaption>
                                                                     
