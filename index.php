@@ -555,7 +555,7 @@
                     <div class="col-md-4">
                         <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                             <i class="ion-ios-email-outline"></i>
-                            <h5>support@LiveHealthy.com</h5>
+                            <h5>support@livehealthy.com</h5>
                         </div>
                     </div>
                     <div class="col-md-4">
