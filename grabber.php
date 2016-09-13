@@ -10,8 +10,8 @@ $rows = array();
 
 if($type=='bp') {
 
-    $qry1 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_sys' LIMIT 30";
-    $qry2 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_dia' LIMIT 30";
+    $qry1 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_sys' ORDER BY date DESC LIMIT 30";
+    $qry2 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_dia' ORDER BY date DESC LIMIT 30";
  
     $result1 = mysqli_query($connection, $qry1);
     $result2 = mysqli_query($connection, $qry2);
@@ -43,12 +43,12 @@ if($type=='bp') {
 
 else {
 
-    $qry = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='$type' LIMIT 30";
+    $qry = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='$type' ORDER BY date DESC LIMIT 30";
  
     $result = mysqli_query($connection, $qry);
     $unit="";
-    if ($first_row = $result->fetch_assoc()){
-        $unit=$first_row['unit'];
+    while ($last_row = $result->fetch_assoc()){
+        $unit=$last_row['unit'];
     }
 
     mysqli_close($connection);
@@ -63,8 +63,26 @@ else {
         
         $temp[] = array('v' => date('d M', $row['date']/1000));
         
+		$data= doubleval($row['data']);
+		
+		if(strcmp($row['unit'],$unit)!=0){
+			
+			if(strcmp($unit,"°F")==0){
+				$data= $data*1.8 + 32;
+			}
+			else if(strcmp($unit,"°C")==0){
+				$data= ($data-32)*0.5556;
+			}
+			else if(strcmp($unit,"kg")==0){
+				$data= $data/2.2046;
+			}
+			else if (strcmp($unit,"lbs")==0){
+				$data= $data*2.2046;
+			}
+		}
+		
         //convert the data in case of unit conflict
-        $temp[] = array('v' => doubleval($row['data'])); 
+        $temp[] = array('v' => $data); 
 
         $rows[] = array('c' => $temp);
     }
