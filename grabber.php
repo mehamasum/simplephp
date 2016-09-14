@@ -47,7 +47,7 @@ else {
  
     $result = mysqli_query($connection, $qry);
     $unit="";
-    while ($last_row = $result->fetch_assoc()){
+    if ($last_row = $result->fetch_assoc()){
         $unit=$last_row['unit'];
     }
 
