@@ -10,8 +10,8 @@ $rows = array();
 
 if($type=='bp') {
 
-    $qry1 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_sys' ORDER BY date DESC LIMIT 30";
-    $qry2 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_dia' ORDER BY date DESC LIMIT 30";
+    $qry1 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_sys' ORDER BY id DESC LIMIT 30";
+    $qry2 = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='bp_dia' ORDER BY id DESC LIMIT 30";
  
     $result1 = mysqli_query($connection, $qry1);
     $result2 = mysqli_query($connection, $qry2);
@@ -43,7 +43,7 @@ if($type=='bp') {
 
 else {
 
-    $qry = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='$type' ORDER BY date DESC LIMIT 30";
+    $qry = "SELECT data, date, unit FROM web_stats WHERE email='$patient_email' AND type='$type' ORDER BY id DESC LIMIT 30";
  
     $result = mysqli_query($connection, $qry);
     $unit="";
