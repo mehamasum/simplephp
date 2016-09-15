@@ -452,7 +452,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Monitor Patients</h4>
-                                    <p>Monitor patients' health data synced from client side mobile app.</p>
+                                    <p>Monitor patients' health data synced from client side mobile app. A great way to be in touch.</p>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +465,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Cloud sync</h4>
-                                    <p>Health data is synchronized between mobile app and cloud.</p>
+                                    <p>Health data is synchronized between mobile app and cloud. Graphical visualization tools for physicians.</p>
                                 </div>
                             </div>
                         </div>
@@ -478,7 +478,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Online Appointments</h4>
-                                    <p>Handle appointment requests directly from the web.</p>
+                                    <p>Handle appointment requests directly from the web. Saves a lot of time and phone calls.</p>
                                 </div>
                             </div>
                         </div>
@@ -507,6 +507,16 @@
                                 <p>
                                     Patients can also request for online appointments directly from the app. Physicians can accept appointment requests and notify patients in real time.
                                 </p>
+								
+								<p>
+                                    The mobile app itself is a powerful health monitoring tool. Having activty tracking, sleep tracking, calorie tracking, medication tracking and lots more.
+                                </p>
+								
+								<h4> It's a "Swiss army knife health app" integrated with online functinalities!
+								</h4>
+								
+								<br><br><br><br><br><br>
+								<h2>Currently available on Google Playstore.<h2>
                             </div>
                             
                         </div>
