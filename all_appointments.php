@@ -286,7 +286,9 @@
                                                             <script>
                                                                     $(function() {
                                                                         $('#time".$i."').timepicker();
+																		$('#time".$i."').timepicker({ 'timeFormat': 'h:i A' });
                                                                         $('#time".$i."').timepicker('setTime', new Date()); 
+																		
                                                                         var canvas = document.getElementById('circlecanvas".$i."');
                                                                         var context = canvas.getContext('2d');
                                                                         context.arc(50, 50, 50, 0, Math.PI * 2, false);
