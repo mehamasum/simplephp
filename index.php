@@ -18,7 +18,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>LiveHealthy Web 2.1</title>
+        <title>LiveHealthy Web</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -291,7 +291,7 @@
                             <!-- Slider -->
                             <section class="">
                                 <h1 >
-                                <span>LiveHealthy Web</span><br>
+                                <span>LiveHealthy Web 2.1</span><br>
                                 </span>
                                 </h1>
                                 </section> <!-- cd-intro -->
