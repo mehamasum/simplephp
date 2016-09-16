@@ -18,7 +18,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>LiveHealthy Web</title>
+        <title>LiveHealthy Web 2.1</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -297,7 +297,7 @@
                                 </section> <!-- cd-intro -->
                                 <!-- /.slider -->
                                 <h2>
-                                    A Great way for physicians to be in touch with patients.<br>Monitor health data, handle appointment requests - all from one place.
+                                    A great way for physicians to be in touch with patients.<br>Monitor health data, handle appointment requests - all from one place.
                                 </h2>
                                 <a rel="leanModal" class="btn btn-default btn-green" data-wow-delay=".9s" href="#modal" data-section="#works" >Register or Login</a>
                                 <!--<a href="#modal" class="btn">Connect</a>-->
@@ -464,7 +464,7 @@
                                     </div>
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Cloud sync</h4>
+                                    <h4 class="media-heading">Cloud Sync</h4>
                                     <p>Health data is synchronized between mobile app and cloud. Graphical visualization tools for physicians.</p>
                                 </div>
                             </div>
@@ -502,15 +502,15 @@
                                 Works great with patient side mobile app!
                                 </h1>
                                 <p>
-                                    LiveHealthy mobile app can synchronize data between mobile devices and web. Physicians can monitor their patients' data directly from the web. 
+                                    LiveHealthy mobile app can synchronize data between mobile devices and web. Physicians can monitor their patients' data directly from the website. 
                                 </p>
                                 
 								
 								<p>
-                                    The mobile app itself is a powerful health monitoring tool. Having activty tracking, sleep tracking, calorie tracking, medication tracking and lots more.
+                                    The mobile app itself is a powerful health monitoring tool. Having activity tracking, sleep tracking, calorie tracking, medication tracking and lots more.
                                 </p>
 								
-								<h4> It's a "Swiss army knife health app" integrated with online functinalities!
+								<h4> It's a "Swiss army knife" health app integrated with online functionalities!
 								</h4>
 								
 								
@@ -520,7 +520,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
-                                <img src="images/about/about.jpg" alt="">
+                                <img src="images/about/app.jpg" alt="">
                             </div>
                         </div>
                     </div>
