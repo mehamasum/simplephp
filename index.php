@@ -497,16 +497,14 @@
                 <br><br><br>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
-                            <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
-                                <h2>
+                            <div class="block wow fadeInLeft" align="right" data-wow-delay=".3s" data-wow-duration="500ms">
+                                <h1>
                                 Works great with patient side mobile app!
-                                </h2>
+                                </h1>
                                 <p>
-                                    LiveHealthy mobile app synchronizes data between mobile devices and web. Physicians can monitor their patients' data directly from the web. 
+                                    LiveHealthy mobile app can synchronize data between mobile devices and web. Physicians can monitor their patients' data directly from the web. 
                                 </p>
-                                <p>
-                                    Patients can also request for online appointments directly from the app. Physicians can accept appointment requests and notify patients in real time.
-                                </p>
+                                
 								
 								<p>
                                     The mobile app itself is a powerful health monitoring tool. Having activty tracking, sleep tracking, calorie tracking, medication tracking and lots more.
@@ -515,7 +513,7 @@
 								<h4> It's a "Swiss army knife health app" integrated with online functinalities!
 								</h4>
 								
-								<br><br><br><br><br><br>
+								
 								<h2>Currently available on Google Playstore.<h2>
                             </div>
                             
