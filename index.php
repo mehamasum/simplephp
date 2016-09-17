@@ -352,7 +352,7 @@
                                 </div>
                             </form>
 
-                            <a href="#" class="forgot_password">Forgot password?</a>
+                            
                         </div>
 
                         <!-- Register Form -->
