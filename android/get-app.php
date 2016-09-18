@@ -9,7 +9,7 @@
  if($auth == '01521112085') {
 				
 		
-	$sql= "select token, doc_email, date, time, status FROM web_appointment WHERE email=".$email.";";
+	$sql= "select token, doc_email, date, time, status FROM web_appointment WHERE patient_email=".$email.";";
 	
 		
 	if(($result=$connection->query($sql))==TRUE){
