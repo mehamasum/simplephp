@@ -31,16 +31,30 @@
 		"height_unit VARCHAR(10), ".
 		"hardwork INT(2), ".
 		"password VARCHAR(40), ".
+		"photo VARCHAR(60), ". //added
+		"phone VARCHAR(40), ". //added
+		"latitude DOUBLE(10,2), ". //added
+		"longitude DOUBLE(10,2), ". //added
+		"prefer_dis DOUBLE(10,2), ". //added
+		"is_donor INT(2), ". //added
 		"blood VARCHAR(5));";
-		// added
-		//latitude double
-		//longitude double
-		//prefer_dis double
-		//phone varchar
-		//photo varchar (?)
-		//is_donor int
+		
 
-
+	$create_table_request = "CREATE TABLE web_request( ".
+		"reqid INT PRIMARY KEY AUTO_INCREMENT, ".
+		"reqfrom VARCHAR(50), ".
+		"name VARCHAR(50), ".
+		"sex VARCHAR(8), ".
+		"time BIGINT(20), ". 
+		"bags INT, ".
+		"urgent INT(2), ".
+		"reason VARCHAR(40), ".
+		"phone VARCHAR(40), ". 
+		"latitude DOUBLE(10,2), ". 
+		"longitude DOUBLE(10,2), ". 
+		"is_fulfilled INT(2), ". 
+		"blood VARCHAR(5));";
+	
 		/*
 		
 		
@@ -102,6 +116,7 @@
 	$result = $connection->query($create_table_appointment);
 	$result = $connection->query($create_table_physician_patient);
 	$result = $connection->query($create_table_physician);
+	$result = $connection->query($create_table_request);
 	
 	if ($result==TRUE) {
 		echo "0\n";
