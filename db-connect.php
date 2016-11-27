@@ -1,6 +1,8 @@
 <?php
 
-	// mysql -u system -p system -h 172.30.137.179 sampledb
+	// mysql -u system -p -h 172.30.141.253
+	// system 
+	// use sampledb
 	
 	$dbhost = getenv("MYSQL_SERVICE_HOST");
 	$dbport = getenv("MYSQL_SERVICE_PORT");
