@@ -39,30 +39,33 @@
 		//phone varchar
 		//photo varchar (?)
 		//is_donor int
+
+
+		/*
 		
 		
-// *************************************************************************		
-	//request table
-	 Field       | Type         | Null | Key | Default | Extra          |
-+-------------+--------------+------+-----+---------+----------------+
-| reqid       | int(6)       | NO   | PRI | NULL    | auto_increment |
-| reqfrom     | varchar(50)  | YES  |     | NULL    |                |
-| name        | varchar(30)  | YES  |     | NULL    |                |
-| phone       | varchar(20)  | YES  |     | NULL    |                |
-| bloodgroup  | varchar(20)  | YES  |     | NULL    |                |
-| urgent      | varchar(10)  | YES  |     | NULL    |                |
-| lattitude   | double       | YES  |     | NULL    |                |
-| longitude   | double       | YES  |     | NULL    |                |
-| time        | bigint(20)   | YES  |     | NULL    |                |
-| bags        | int(6)       | YES  |     | NULL    |                |
-| reason      | varchar(200) | YES  |     | NULL    |                |
-| isfulfilled | int(6)       | YES  |     | NULL    |                |
-+-------------+--------------+------+-----+---------+----------------+
+		// *************************************************************************		
+			//request table
+			 Field       | Type         | Null | Key | Default | Extra          |
+		+-------------+--------------+------+-----+---------+----------------+
+		| reqid       | int(6)       | NO   | PRI | NULL    | auto_increment |
+		| reqfrom     | varchar(50)  | YES  |     | NULL    |                |
+		| name        | varchar(30)  | YES  |     | NULL    |                |
+		| phone       | varchar(20)  | YES  |     | NULL    |                |
+		| bloodgroup  | varchar(20)  | YES  |     | NULL    |                |
+		| urgent      | varchar(10)  | YES  |     | NULL    |                |
+		| lattitude   | double       | YES  |     | NULL    |                |
+		| longitude   | double       | YES  |     | NULL    |                |
+		| time        | bigint(20)   | YES  |     | NULL    |                |
+		| bags        | int(6)       | YES  |     | NULL    |                |
+		| reason      | varchar(200) | YES  |     | NULL    |                |
+		| isfulfilled | int(6)       | YES  |     | NULL    |                |
+		+-------------+--------------+------+-----+---------+----------------+
 
-//***************************************************************************
+		//***************************************************************************
 
 
-
+		*/
 
 	
 	$create_table_appointment = "CREATE TABLE web_appointment( ".
