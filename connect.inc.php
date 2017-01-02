@@ -4,8 +4,8 @@
 
 //$a_host= '192.168.0.107';
 $a_host= 'localhost';
-$a_user= 'rspbdcom_batfia';
-$a_pass= 'Pushpop007';
+$a_user= 'rspbdcom';
+$a_pass= '';
 $a_db= 'rspbdcom_healthpal';
 
 // Create connection
@@ -15,7 +15,7 @@ if ($connection->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }else{
 	
-	//echo "connected :D\n";
+	echo "connected :D\n";
 } 
 
 
