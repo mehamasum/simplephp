@@ -46,7 +46,7 @@
 			foreach($json_a['datas'] as $p){
 				
 			//	echo "foreach\n";
-				$sql1 = "INSERT INTO web_stats (email, id, type, data, unit, date) VALUES (" . $email . "," . $p['id'] . ",'" . $p['type'] . "'," . $p['data'] . ",'". $p['unit'] . "', ".$p['date'] . ");";
+				$sql1 = "INSERT INTO web_stats (email, id, type, data, unit, date) VALUES (" . $email . "," . $p['id'] . ",'" . $p['type'] . "'," . $p['data'] . ",'". $p['unit'] . "', '".$p['date'] . "');";
 	
 				if ($connection->query($sql1) == TRUE) {
 					echo "1\n";
