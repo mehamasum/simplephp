@@ -17,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>LiveHealthy Web</title>
+        <title>HealthPal Web</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -236,7 +236,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Have your say</h1>
+                            <h1 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">Have your say</h1>
                             <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Report a bug or request a feature</p>
                             <a href="" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                         </div>

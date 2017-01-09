@@ -18,7 +18,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <title>LiveHealthy Web</title>
+        <title>HealthPal Web</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -291,7 +291,7 @@
                             <!-- Slider -->
                             <section class="">
                                 <h1 >
-                                <span>LiveHealthy Web 2.1</span><br>
+                                <span>HealthPal Web 2.1</span><br>
                                 </span>
                                 </h1>
                                 </section> <!-- cd-intro -->
@@ -502,7 +502,7 @@
                                 Works great with patient side mobile app!
                                 </h1>
                                 <p>
-                                    LiveHealthy mobile app can synchronize data between mobile devices and web. Physicians can monitor their patients' data directly from the website. 
+                                    HealthPal mobile app can synchronize data between mobile devices and web. Physicians can monitor their patients' data directly from the website.
                                 </p>
                                 
 								
@@ -539,7 +539,7 @@
                     <div class="section-heading">
                         <h1 class="title wow fadeInDown" data-wow-delay=".3s">Find Us</h1>
                         <p class="wow fadeInDown" data-wow-delay=".5s">
-                            Team LiveHealthy is at your service 24x7!
+                            Team HealthPal is at your service 24x7!
                         </p>
                     </div>
                     
@@ -563,7 +563,7 @@
                     <div class="col-md-4">
                         <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                             <i class="ion-ios-email-outline"></i>
-                            <h5>support@livehealthy.com</h5>
+                            <h5>contact@healthpal.cf</h5>
                         </div>
                     </div>
                     <div class="col-md-4">
